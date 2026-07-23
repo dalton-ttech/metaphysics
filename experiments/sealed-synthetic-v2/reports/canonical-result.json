@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "modelVersion": "sealed-synthetic-v2.2",
+  "canonicalRunId": "2026-07-20T17-05-16-320Z-3c305a3c",
+  "replayRunId": "2026-07-20T17-05-59-219Z-df4d6179",
+  "coreMetricsSha256": "d6276b6283352b71c459b5c8209a60a173026f0a31cee24acf2cafc98a2c0155",
+  "questionBankSha256": "0f44b84058186f9cf5ac587003106de615cef9385e634a8bacce71c09d88ec7b",
+  "policySourceSha256": "20e49b3f0e6514d0837ec18c7f56d638820a13d38ae93293c54ec7262caa6d5f",
+  "socialEvidenceCatalogSha256": "b09f1deba5a720b7c1289626bcb755f05a4cecfb88dd27cc90e9cc922c1dda08",
+  "seedCommitment": "d0726e27dd4eb571122708a6838226b2fbc75ff86fbba6e3592d3f53e83a1fae",
+  "counts": {
+    "profiles": 850,
+    "sessions": 880,
+    "validationSessions": 300,
+    "agentProfiles": 250,
+    "agentSessions": 280,
+    "ruleProfiles": 600,
+    "ruleSessions": 600,
+    "questionBank": 218,
+    "socialEvidenceRecords": 14
+  },
+  "sessionDesign": {
+    "questions": 24,
+    "coverageQuestions": 16,
+    "coverageEventsPerQuestion": 3,
+    "rareCrosscheckQuestions": 4,
+    "rareCrosscheckEventsPerQuestion": [2, 3],
+    "repeatedSingleEventConfirmations": 4,
+    "coveredTopLevelEvents": 48
+  },
+  "thresholds": {
+    "highConfidence": 0.88,
+    "candidate": 0.25,
+    "highConfidenceCalibrationPrecisionTarget": 0.95,
+    "selectedFrom": "calibration-only"
+  },
+  "validation": {
+    "highConfidencePrecision": 0.9473684210526315,
+    "highConfidenceRecall": 0.05258033106134372,
+    "highConfidencePredictions": 171,
+    "candidatePrecision": 0.4502664298401421,
+    "candidateRecall": 0.8227848101265823,
+    "candidateF1": 0.5820227298817587,
+    "highConfidenceFalsePositiveRate": 0.0007951232441028359,
+    "brierScore": 0.12536561989289668,
+    "averageQuestions": 24,
+    "minimumPerEventRecall": 0.6060606060606061,
+    "medianPerEventRecall": 0.8,
+    "zeroRecallEvents": 0
+  },
+  "retest": {
+    "pairs": 30,
+    "jaccard": 0.9333333333333333
+  },
+  "simulatedComprehension": {
+    "observations": 20946,
+    "clearRate": 0.9613291320538527,
+    "method": "oracle-latent-state"
+  },
+  "gates": {
+    "highConfidencePrecision": true,
+    "candidatePrecision": true,
+    "candidateRecall": true,
+    "highConfidenceFalsePositiveRate": true,
+    "retest": true,
+    "simulatedComprehension": true,
+    "allPassed": true
+  },
+  "reproducibility": {
+    "sameSeed": true,
+    "coreMetricsEqual": true,
+    "auditChainsValid": [true, true]
+  },
+  "scopeBoundary": "All metrics are from a sealed synthetic experiment. They do not establish real-user accuracy."
+}

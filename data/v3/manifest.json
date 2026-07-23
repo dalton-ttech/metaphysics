@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "3.0.0",
+  "corpusVersion": "2026.07.21-v4-content.1",
+  "generatedAt": "2026-07-21T00:00:00+08:00",
+  "contentPolicy": "modern_fabricated_only",
+  "counts": {
+    "facts": 420,
+    "semanticFamilies": 84,
+    "calibrationClauses": 420,
+    "fateClauses": 840
+  },
+  "fateCategoryCounts": {
+    "命局": 336,
+    "前运": 252,
+    "后运": 252
+  },
+  "files": [
+    "content-schema.json",
+    "facts.json",
+    "calibration-clauses.json",
+    "fate-clauses.json"
+  ]
+}

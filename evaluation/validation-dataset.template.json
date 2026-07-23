@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "description": "Independent life-history labels and decoder probabilities. Copy this file before entering participant data.",
+  "recordSchema": {
+    "required": ["id", "cohort", "intake", "truthEventIds", "probabilities", "answerTrace", "responseTimings", "cognitiveAnnotations", "modelVersion"],
+    "cohortValues": ["cognitive", "calibration", "validation", "retest"],
+    "note": "Truth labels must be locked before questions. Calibration thresholds must never use validation records."
+  },
+  "records": []
+}

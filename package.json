@@ -1,0 +1,58 @@
+{
+  "name": "tieban-life-decoder-20260720",
+  "version": "4.2.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "package": "npm run build && node scripts/prepare-standalone.mjs",
+    "start": "node next-build-v6/standalone/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "simulate": "npm run synthetic:v4:run",
+    "validation:merge": "node scripts/merge-validation-records.mjs",
+    "validation:evaluate": "node scripts/evaluate-validation.mjs",
+    "validation:smoke": "node scripts/smoke-validation-pipeline.mjs",
+    "content:v3:test": "node --test tests/content-v3.validation.test.mjs",
+    "content:v4:test": "node --test tests/content-v4-codebook.test.mjs",
+    "conditional:simulate": "node scripts/v4/simulate-conditional-applicability.mjs",
+    "conditional:test": "node scripts/v4/simulate-conditional-applicability.mjs --verify",
+    "event-graph:simulate": "node scripts/v4/simulate-global-event-graph.mjs",
+    "event-graph:test": "node scripts/v4/simulate-global-event-graph.mjs --verify",
+    "copy:audit": "vite-node -c vitest.config.ts scripts/audit-vernacular-copy.ts",
+    "future:audit": "vite-node -c vitest.config.ts scripts/audit-lifetime-forecast.ts",
+    "synthetic:test": "npm --prefix experiments/sealed-tieban-v3 test",
+    "synthetic:run": "npm --prefix experiments/sealed-tieban-v3 run",
+    "synthetic:v3:test": "npm --prefix experiments/sealed-tieban-v3 test",
+    "synthetic:v3:run": "npm --prefix experiments/sealed-tieban-v3 run",
+    "synthetic:v4:test": "npm --prefix experiments/sealed-tieban-v4 test",
+    "synthetic:v4:run": "npm --prefix experiments/sealed-tieban-v4 run",
+    "synthetic:v2.3:test": "npm --prefix experiments/sealed-synthetic-v2.3 test",
+    "synthetic:v2.3:run": "npm --prefix experiments/sealed-synthetic-v2.3 run",
+    "synthetic:v2.2:test": "npm --prefix experiments/sealed-synthetic-v2 test",
+    "synthetic:v2.2:run": "npm --prefix experiments/sealed-synthetic-v2 run",
+    "synthetic:v1:test": "npm --prefix experiments/sealed-synthetic-v1 test",
+    "synthetic:v1:run": "npm --prefix experiments/sealed-synthetic-v1 run",
+    "release:manifest": "node scripts/create-release-manifest.mjs",
+    "release": "npm run test && npm run content:v4:test && npm run conditional:test && npm run event-graph:test && npm run synthetic:v4:test && npm run typecheck && npm run package && npm run release:manifest"
+  },
+  "dependencies": {
+    "@fontpkg/huiwen-mincho": "^1.0.0",
+    "@fontsource/noto-sans-sc": "^5.3.0",
+    "@fontsource/zcool-xiaowei": "^5.3.0",
+    "next": "16.2.10",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.10",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "typescript": "5.7.2",
+    "vitest": "3.2.6"
+  },
+  "overrides": {
+    "postcss": "8.5.10",
+    "vite": "6.4.3"
+  }
+}

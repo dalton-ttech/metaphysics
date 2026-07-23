@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0.0",
+  "corpusVersion": "2026.07.22-v4.2.1",
+  "generatedAt": "2026-07-22T00:00:00+08:00",
+  "seed": "global-event-graph-v1",
+  "configHash": "84286b4148d933cd305cdc8a183bbe5412945b96470585502797485e8a8b604c",
+  "dataHash": "3acc83ee20c5fab8a784d6a01308dd053fa27f959d895cd82d16e42cb6caf3ba",
+  "codebookHash": "6f20637ccb4b621c4563607708579aa2bd922ce8fb8d77585fbf1e40866f31a7",
+  "sourceHash": "03a6165d44350f03d28979d85ec45ee20d73c9497c1be927c2fb9acbba7635e5",
+  "metrics": {
+    "totalSamples": 20000,
+    "conditionalFacts": 116,
+    "checkedConditionalFacts": 2320000,
+    "contradictoryEligibleCount": 0,
+    "unresolvedExclusionOverSuppressionCount": 0,
+    "unresolvedRequirementNotDeferredCount": 0,
+    "candidateCoreFactsChecked": 27196,
+    "candidateCoreContradictions": 0,
+    "ruleMaterializationMissingCount": 0,
+    "statusCounts": {
+      "eligible": 1635000,
+      "deferred": 0,
+      "not_applicable": 685000
+    }
+  },
+  "ruleCoverage": [
+    {
+      "ruleId": "family.sibling-existence",
+      "expectedFacts": 10,
+      "materializedFacts": 10
+    },
+    {
+      "ruleId": "family.no-long-caregiving-before-30",
+      "expectedFacts": 5,
+      "materializedFacts": 5
+    },
+    {
+      "ruleId": "family.no-close-loss-before-30",
+      "expectedFacts": 5,
+      "materializedFacts": 5
+    },
+    {
+      "ruleId": "relationship.no-marriage-before-40",
+      "expectedFacts": 7,
+      "materializedFacts": 7
+    },
+    {
+      "ruleId": "relationship.no-second-long-relationship-before-40",
+      "expectedFacts": 4,
+      "materializedFacts": 4
+    },
+    {
+      "ruleId": "relationship.no-year-long-relationship-before-40",
+      "expectedFacts": 4,
+      "materializedFacts": 4
+    },
+    {
+      "ruleId": "relationship.no-child-rearing-before-45",
+      "expectedFacts": 4,
+      "materializedFacts": 4
+    },
+    {
+      "ruleId": "career.no-switch-before-40",
+      "expectedFacts": 4,
+      "materializedFacts": 4
+    },
+    {
+      "ruleId": "career.no-leadership-before-35",
+      "expectedFacts": 3,
+      "materializedFacts": 3
+    },
+    {
+      "ruleId": "career.no-entrepreneurship-before-40",
+      "expectedFacts": 4,
+      "materializedFacts": 4
+    },
+    {
+      "ruleId": "career.no-involuntary-interruption-before-40",
+      "expectedFacts": 4,
+      "materializedFacts": 4
+    },
+    {
+      "ruleId": "wealth.no-life-changing-shock-before-40",
+      "expectedFacts": 6,
+      "materializedFacts": 6
+    },
+    {
+      "ruleId": "health.no-treatment-level-accident-before-40",
+      "expectedFacts": 16,
+      "materializedFacts": 16
+    },
+    {
+      "ruleId": "mobility.never-left-before-30",
+      "expectedFacts": 7,
+      "materializedFacts": 7
+    },
+    {
+      "ruleId": "mobility.no-overseas-stay-before-35",
+      "expectedFacts": 5,
+      "materializedFacts": 5
+    },
+    {
+      "ruleId": "mobility.no-childhood-moves",
+      "expectedFacts": 4,
+      "materializedFacts": 4
+    },
+    {
+      "ruleId": "career.entry-before-event-window",
+      "expectedFacts": 18,
+      "materializedFacts": 18
+    }
+  ],
+  "resultHash": "8567418b3c315c81068a5be06e95b959a41011bbda30f02982f8a4ca0fe3d478",
+  "acceptance": {
+    "noContradictoryEligibleFacts": true,
+    "unresolvedExclusionsRemainEligible": true,
+    "unresolvedRequirementsDefer": true,
+    "noContradictoryCandidateCoreFacts": true,
+    "allRulesMaterialized": true,
+    "deterministicReplay": true
+  }
+}

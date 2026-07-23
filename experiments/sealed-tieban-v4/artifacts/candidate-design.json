@@ -1,0 +1,209 @@
+{
+  "candidateCount": 120,
+  "factCount": 60,
+  "questionOrder": [
+    36,
+    37,
+    41,
+    5,
+    50,
+    54,
+    8,
+    30,
+    53,
+    17,
+    10,
+    13,
+    55,
+    28,
+    57,
+    46,
+    21,
+    25,
+    44,
+    51,
+    20,
+    58,
+    47,
+    52,
+    14,
+    48,
+    23,
+    56,
+    22,
+    43,
+    29,
+    42,
+    59,
+    49,
+    18,
+    45,
+    24,
+    39,
+    26,
+    40,
+    27,
+    38,
+    12,
+    19,
+    16,
+    11,
+    7,
+    15,
+    3,
+    4,
+    9,
+    34,
+    35,
+    6,
+    1,
+    2,
+    32,
+    33,
+    0,
+    31
+  ],
+  "diagnostics": {
+    "minimumHammingDistanceAt16": 5,
+    "minimumHammingDistanceAt26": 9,
+    "sameIntervalMinimumDistanceAt26": 10,
+    "fullMinimumHammingDistance": 16,
+    "profileHash": "4172fb322b6808339d3a33daa08361c65969d2e5b95bc62c80e470e43ddf49ff"
+  },
+  "gates": {
+    "validation_in_model_default": {
+      "minuteAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.9
+      },
+      "fourMinuteIntervalAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.96
+      },
+      "portraitPrecision": {
+        "direction": "minimum",
+        "threshold": 0.88
+      },
+      "portraitRecall": {
+        "direction": "minimum",
+        "threshold": 0.88
+      },
+      "unaskedEventPrecision": {
+        "direction": "minimum",
+        "threshold": 0.85
+      },
+      "averageRounds": {
+        "direction": "maximum",
+        "threshold": 24
+      },
+      "directQuestionReuseRate": {
+        "direction": "maximum",
+        "threshold": 0
+      },
+      "questionBookEightGramReuseRate": {
+        "direction": "maximum",
+        "threshold": 0.01
+      }
+    },
+    "validation_in_model_noisy": {
+      "minuteAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.7
+      },
+      "fourMinuteIntervalAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.82
+      },
+      "portraitPrecision": {
+        "direction": "minimum",
+        "threshold": 0.75
+      },
+      "portraitRecall": {
+        "direction": "minimum",
+        "threshold": 0.75
+      },
+      "unaskedEventPrecision": {
+        "direction": "minimum",
+        "threshold": 0.72
+      },
+      "wrongAnswerRecoveryRate": {
+        "direction": "minimum",
+        "threshold": 0.65
+      },
+      "directQuestionReuseRate": {
+        "direction": "maximum",
+        "threshold": 0
+      }
+    },
+    "validation_out_model": {
+      "minuteAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.55
+      },
+      "fourMinuteIntervalAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.7
+      },
+      "portraitPrecision": {
+        "direction": "minimum",
+        "threshold": 0.72
+      },
+      "portraitRecall": {
+        "direction": "minimum",
+        "threshold": 0.72
+      },
+      "unaskedEventPrecision": {
+        "direction": "minimum",
+        "threshold": 0.7
+      },
+      "directQuestionReuseRate": {
+        "direction": "maximum",
+        "threshold": 0
+      }
+    },
+    "extreme_conflict": {
+      "fourMinuteIntervalAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.12
+      },
+      "portraitPrecision": {
+        "direction": "minimum",
+        "threshold": 0.45
+      },
+      "unaskedEventPrecision": {
+        "direction": "minimum",
+        "threshold": 0.4
+      }
+    },
+    "determinism": {
+      "exactReplayRate": {
+        "direction": "minimum",
+        "threshold": 1
+      }
+    },
+    "birthCounterfactual": {
+      "lockedCandidateChangeRate": {
+        "direction": "minimum",
+        "threshold": 0.8
+      },
+      "bookDifferenceRate": {
+        "direction": "minimum",
+        "threshold": 0.9
+      },
+      "meanLockedProfileJaccard": {
+        "direction": "maximum",
+        "threshold": 0.75
+      }
+    },
+    "bookSeparation": {
+      "differentCandidateBookDifferenceRate": {
+        "direction": "minimum",
+        "threshold": 0.99
+      },
+      "meanBookTokenJaccard": {
+        "direction": "maximum",
+        "threshold": 0.8
+      }
+    }
+  }
+}

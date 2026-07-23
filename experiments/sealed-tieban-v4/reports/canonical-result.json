@@ -1,0 +1,384 @@
+{
+  "schemaVersion": "sealed-tieban-v4-result-v1",
+  "modelVersion": "sealed-tieban-v4.0",
+  "samples": {
+    "calibration_in_model": 5000,
+    "validation_in_model_default": 12000,
+    "validation_in_model_noisy": 12000,
+    "validation_out_model": 19500,
+    "extreme_conflict": 500,
+    "determinism_retest": 500,
+    "birth_counterfactual": 500
+  },
+  "plannedSessions": 50000,
+  "executedSessions": 50000,
+  "formalSessionTarget": 50000,
+  "architecture": {
+    "causalChain": [
+      "BirthSeed",
+      "120 pre-generated candidate Profiles",
+      "clauses selected from candidate Profile matrix",
+      "answers update candidate posterior only",
+      "one candidate Profile locked",
+      "book generated from locked Profile only"
+    ],
+    "bookGeneratorInputs": [
+      "lockedProfile",
+      "birthSeed"
+    ],
+    "bookGeneratorAcceptsTranscript": false,
+    "answerMutatesProfile": false,
+    "candidateCount": 120,
+    "factCount": 60,
+    "clauseCount": 60
+  },
+  "codeDiagnostics": {
+    "minimumHammingDistanceAt16": 5,
+    "minimumHammingDistanceAt26": 9,
+    "sameIntervalMinimumDistanceAt26": 10,
+    "fullMinimumHammingDistance": 16,
+    "profileHash": "4172fb322b6808339d3a33daa08361c65969d2e5b95bc62c80e470e43ddf49ff"
+  },
+  "personaCohort": {
+    "count": 1500,
+    "strategies": {
+      "literal": 500,
+      "cautious": 500,
+      "conflicted": 500
+    },
+    "commitment": "c57357a15244ed2bada55ab85cbc05fc0f751ecd3c0af702ba1e2cfb99b15a92"
+  },
+  "metrics": {
+    "calibration_in_model": {
+      "sessions": 5000,
+      "minuteAccuracy": 1,
+      "fourMinuteIntervalAccuracy": 1,
+      "top3MinuteAccuracy": 1,
+      "averageRounds": 16.1334,
+      "minimumRounds": 16,
+      "maximumRounds": 27,
+      "wrongAnswers": 1681,
+      "unknownAnswers": 2559,
+      "sessionsWithWrongAnswers": 1404,
+      "wrongAnswerRecoveryRate": 1,
+      "portraitPrecision": 1,
+      "portraitRecall": 1,
+      "portraitJaccard": 1,
+      "unaskedEventPrecision": 1,
+      "directQuestionReuseRate": 0,
+      "questionBookEightGramReuseRate": 0,
+      "outsideCandidateRate": 0
+    },
+    "validation_in_model_default": {
+      "sessions": 12000,
+      "minuteAccuracy": 0.99975,
+      "fourMinuteIntervalAccuracy": 0.99975,
+      "top3MinuteAccuracy": 0.9999166666666667,
+      "averageRounds": 16.139166666666668,
+      "minimumRounds": 16,
+      "maximumRounds": 29,
+      "wrongAnswers": 4177,
+      "unknownAnswers": 6212,
+      "sessionsWithWrongAnswers": 3467,
+      "wrongAnswerRecoveryRate": 0.9991346985866744,
+      "portraitPrecision": 0.9999026801876326,
+      "portraitRecall": 0.9998693177552683,
+      "portraitJaccard": 0.9997720233759446,
+      "unaskedEventPrecision": 0.9999010097010493,
+      "directQuestionReuseRate": 0,
+      "questionBookEightGramReuseRate": 0,
+      "outsideCandidateRate": 0
+    },
+    "validation_in_model_noisy": {
+      "sessions": 12000,
+      "minuteAccuracy": 0.9134166666666667,
+      "fourMinuteIntervalAccuracy": 0.9225833333333333,
+      "top3MinuteAccuracy": 0.9615,
+      "averageRounds": 20.437333333333335,
+      "minimumRounds": 16,
+      "maximumRounds": 32,
+      "wrongAnswers": 25115,
+      "unknownAnswers": 36684,
+      "sessionsWithWrongAnswers": 8329,
+      "wrongAnswerRecoveryRate": 0.8752551326689879,
+      "portraitPrecision": 0.9597089644289858,
+      "portraitRecall": 0.9605228401978585,
+      "portraitJaccard": 0.9232909443704999,
+      "unaskedEventPrecision": 0.9638024128912511,
+      "directQuestionReuseRate": 0,
+      "questionBookEightGramReuseRate": 0,
+      "outsideCandidateRate": 0
+    },
+    "validation_out_model": {
+      "sessions": 19500,
+      "minuteAccuracy": 0.8139487179487179,
+      "fourMinuteIntervalAccuracy": 0.8282051282051283,
+      "top3MinuteAccuracy": 0.8992307692307693,
+      "averageRounds": 22.517794871794873,
+      "minimumRounds": 16,
+      "maximumRounds": 32,
+      "wrongAnswers": 33648,
+      "unknownAnswers": 51706,
+      "sessionsWithWrongAnswers": 11692,
+      "wrongAnswerRecoveryRate": 0.705867259664728,
+      "portraitPrecision": 0.8368468524081923,
+      "portraitRecall": 0.8360798408801616,
+      "portraitJaccard": 0.7188970300121675,
+      "unaskedEventPrecision": 0.8306521386841866,
+      "directQuestionReuseRate": 0,
+      "questionBookEightGramReuseRate": 0,
+      "outsideCandidateRate": 1
+    },
+    "extreme_conflict": {
+      "sessions": 500,
+      "minuteAccuracy": 0.092,
+      "fourMinuteIntervalAccuracy": 0.126,
+      "top3MinuteAccuracy": 0.178,
+      "averageRounds": 27.686,
+      "minimumRounds": 16,
+      "maximumRounds": 32,
+      "wrongAnswers": 2620,
+      "unknownAnswers": 1803,
+      "sessionsWithWrongAnswers": 498,
+      "wrongAnswerRecoveryRate": 0.09036144578313253,
+      "portraitPrecision": 0.581513492115854,
+      "portraitRecall": 0.5795252810835689,
+      "portraitJaccard": 0.40896436525612473,
+      "unaskedEventPrecision": 0.527346139728374,
+      "directQuestionReuseRate": 0,
+      "questionBookEightGramReuseRate": 0,
+      "outsideCandidateRate": 1
+    }
+  },
+  "pairedNoise": {
+    "matchedSubjects": 12000,
+    "exactRetentionGivenDefaultCorrect": 0.9133950154205218,
+    "intervalRetentionGivenDefaultCorrect": 0.9225639743269151
+  },
+  "determinism": {
+    "replaySessions": 500,
+    "exactReplayRate": 1
+  },
+  "birthCounterfactual": {
+    "pairs": 500,
+    "lockedCandidateChangeRate": 0.982,
+    "lockedMinuteChangeRate": 0.982,
+    "bookDifferenceRate": 1,
+    "meanLockedProfileJaccard": 0.41768934824706744
+  },
+  "bookSeparation": {
+    "comparisons": 5000,
+    "differentCandidateBookDifferenceRate": 1,
+    "meanBookTokenJaccard": 0.43512563876903104
+  },
+  "gates": {
+    "validation_in_model_default": {
+      "minuteAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.9,
+        "actual": 0.99975,
+        "passed": true
+      },
+      "fourMinuteIntervalAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.96,
+        "actual": 0.99975,
+        "passed": true
+      },
+      "portraitPrecision": {
+        "direction": "minimum",
+        "threshold": 0.88,
+        "actual": 0.9999026801876326,
+        "passed": true
+      },
+      "portraitRecall": {
+        "direction": "minimum",
+        "threshold": 0.88,
+        "actual": 0.9998693177552683,
+        "passed": true
+      },
+      "unaskedEventPrecision": {
+        "direction": "minimum",
+        "threshold": 0.85,
+        "actual": 0.9999010097010493,
+        "passed": true
+      },
+      "averageRounds": {
+        "direction": "maximum",
+        "threshold": 24,
+        "actual": 16.139166666666668,
+        "passed": true
+      },
+      "directQuestionReuseRate": {
+        "direction": "maximum",
+        "threshold": 0,
+        "actual": 0,
+        "passed": true
+      },
+      "questionBookEightGramReuseRate": {
+        "direction": "maximum",
+        "threshold": 0.01,
+        "actual": 0,
+        "passed": true
+      }
+    },
+    "validation_in_model_noisy": {
+      "minuteAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.7,
+        "actual": 0.9134166666666667,
+        "passed": true
+      },
+      "fourMinuteIntervalAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.82,
+        "actual": 0.9225833333333333,
+        "passed": true
+      },
+      "portraitPrecision": {
+        "direction": "minimum",
+        "threshold": 0.75,
+        "actual": 0.9597089644289858,
+        "passed": true
+      },
+      "portraitRecall": {
+        "direction": "minimum",
+        "threshold": 0.75,
+        "actual": 0.9605228401978585,
+        "passed": true
+      },
+      "unaskedEventPrecision": {
+        "direction": "minimum",
+        "threshold": 0.72,
+        "actual": 0.9638024128912511,
+        "passed": true
+      },
+      "wrongAnswerRecoveryRate": {
+        "direction": "minimum",
+        "threshold": 0.65,
+        "actual": 0.8752551326689879,
+        "passed": true
+      },
+      "directQuestionReuseRate": {
+        "direction": "maximum",
+        "threshold": 0,
+        "actual": 0,
+        "passed": true
+      }
+    },
+    "validation_out_model": {
+      "minuteAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.55,
+        "actual": 0.8139487179487179,
+        "passed": true
+      },
+      "fourMinuteIntervalAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.7,
+        "actual": 0.8282051282051283,
+        "passed": true
+      },
+      "portraitPrecision": {
+        "direction": "minimum",
+        "threshold": 0.72,
+        "actual": 0.8368468524081923,
+        "passed": true
+      },
+      "portraitRecall": {
+        "direction": "minimum",
+        "threshold": 0.72,
+        "actual": 0.8360798408801616,
+        "passed": true
+      },
+      "unaskedEventPrecision": {
+        "direction": "minimum",
+        "threshold": 0.7,
+        "actual": 0.8306521386841866,
+        "passed": true
+      },
+      "directQuestionReuseRate": {
+        "direction": "maximum",
+        "threshold": 0,
+        "actual": 0,
+        "passed": true
+      }
+    },
+    "extreme_conflict": {
+      "fourMinuteIntervalAccuracy": {
+        "direction": "minimum",
+        "threshold": 0.12,
+        "actual": 0.126,
+        "passed": true
+      },
+      "portraitPrecision": {
+        "direction": "minimum",
+        "threshold": 0.45,
+        "actual": 0.581513492115854,
+        "passed": true
+      },
+      "unaskedEventPrecision": {
+        "direction": "minimum",
+        "threshold": 0.4,
+        "actual": 0.527346139728374,
+        "passed": true
+      }
+    },
+    "determinism": {
+      "exactReplayRate": {
+        "direction": "minimum",
+        "threshold": 1,
+        "actual": 1,
+        "passed": true
+      }
+    },
+    "birthCounterfactual": {
+      "lockedCandidateChangeRate": {
+        "direction": "minimum",
+        "threshold": 0.8,
+        "actual": 0.982,
+        "passed": true
+      },
+      "bookDifferenceRate": {
+        "direction": "minimum",
+        "threshold": 0.9,
+        "actual": 1,
+        "passed": true
+      },
+      "meanLockedProfileJaccard": {
+        "direction": "maximum",
+        "threshold": 0.75,
+        "actual": 0.41768934824706744,
+        "passed": true
+      }
+    },
+    "bookSeparation": {
+      "differentCandidateBookDifferenceRate": {
+        "direction": "minimum",
+        "threshold": 0.99,
+        "actual": 1,
+        "passed": true
+      },
+      "meanBookTokenJaccard": {
+        "direction": "maximum",
+        "threshold": 0.8,
+        "actual": 0.43512563876903104,
+        "passed": true
+      }
+    }
+  },
+  "gateSummary": {
+    "passed": 30,
+    "failed": 0
+  },
+  "commitments": {
+    "configuration": "99459f3fc01de08831d5d7463e94f12d653074527d059993f384f00a89ef7f55",
+    "clauses": "124560456f13d01760c721560ba4581bceb9842840e93064294e4b9c52eb1897",
+    "aggregateCore": "6dd4684e8f49c03b613ad3a8c8a7df1661728a2f69f84c06a38ab68b8f59cd0b"
+  },
+  "reproducibility": {
+    "deterministicProgramSimulation": true,
+    "sourceFilesSha256": "b663f591d7e14650f0ddb2baa14f36fb57d7543e6182d1ae46c6095505b947a9",
+    "resultSha256": "6dd4684e8f49c03b613ad3a8c8a7df1661728a2f69f84c06a38ab68b8f59cd0b"
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "schemaVersion": "sealed-tieban-v3-result-v1",
+  "modelVersion": "sealed-tieban-v3.0",
+  "samples": {
+    "calibration_default": 2400,
+    "validation_default": 1200,
+    "validation_stress": 1200,
+    "validation_agent": 600,
+    "recovery_1_wrong": 1200,
+    "recovery_2_wrong": 1200,
+    "retest": 240
+  },
+  "codebooks": {
+    "candidateCount": 120,
+    "clauseCount": 60,
+    "candidateHash": "676b6ef0b91abce99fbf0305f1c8bd26d88bd54469fc662011342a7fced1436a",
+    "clauseHash": "56e94ce926cf4c475e40e6fd6eb2a7ff23e80de77549f0ef7473e9fb16d2a54c",
+    "diagnostics": {
+      "sourcePoolProfiles": 6000,
+      "uniqueSourceSignatures": 5598,
+      "uncoveredFacts": [],
+      "factCoverage": {
+        "fact:fam_early_burden": 45,
+        "fact:fam_parental_distance": 45,
+        "fact:fam_financial_fall": 47,
+        "fact:fam_elder_loss": 43,
+        "fact:fam_sibling_duty": 41,
+        "fact:fam_caregiving": 38,
+        "fact:edu_school_transfer": 56,
+        "fact:edu_study_interruption": 39,
+        "fact:edu_exam_turn": 57,
+        "fact:move_left_hometown": 59,
+        "fact:move_repeated": 50,
+        "fact:move_overseas": 30,
+        "fact:career_early_work": 45,
+        "fact:career_switch": 53,
+        "fact:career_leadership": 46,
+        "fact:career_entrepreneurship": 40,
+        "fact:career_job_loss": 45,
+        "fact:career_major_achievement": 32,
+        "fact:wealth_income_leap": 48,
+        "fact:wealth_debt": 61,
+        "fact:wealth_investment_loss": 52,
+        "fact:wealth_property": 37,
+        "fact:wealth_family_support": 54,
+        "fact:wealth_bankruptcy": 35,
+        "fact:rel_formative_love": 54,
+        "fact:rel_long_single": 58,
+        "fact:rel_major_breakup": 56,
+        "fact:rel_marriage": 67,
+        "fact:rel_divorce": 41,
+        "fact:rel_betrayal": 40,
+        "fact:health_hospital": 54,
+        "fact:health_chronic": 57,
+        "fact:health_accident": 45,
+        "fact:health_burnout": 58,
+        "fact:health_reproductive": 49,
+        "fact:health_recovery": 57,
+        "fact:law_dispute": 34,
+        "fact:law_crime_contact": 24,
+        "fact:social_reputation_crisis": 32,
+        "fact:social_major_conflict": 48,
+        "fact:social_mentor": 51,
+        "fact:social_partnership_break": 45,
+        "fact:turn_child_arrival": 51,
+        "fact:turn_close_death": 49,
+        "fact:turn_inheritance": 27,
+        "fact:turn_spiritual": 41,
+        "fact:turn_restart": 57,
+        "fact:turn_identity_shift": 46,
+        "fact:career_early_work_before_18": 26,
+        "fact:move_left_hometown_before_22": 29,
+        "fact:edu_school_transfer_before_12": 34,
+        "fact:health_hospital_before_18": 28,
+        "fact:rel_formative_love_before_20": 24,
+        "fact:rel_marriage_before_28": 42,
+        "fact:turn_child_arrival_before_30": 33,
+        "fact:career_switch_before_30": 31,
+        "fact:career_leadership_before_35": 32,
+        "fact:wealth_debt_before_30": 40,
+        "fact:turn_close_death_before_30": 31,
+        "fact:turn_restart_before_35": 41
+      },
+      "minimumHammingDistance": 18
+    }
+  },
+  "rounds": {
+    "minimum": 12,
+    "maximum": 26,
+    "stopTop1Posterior": 0.82,
+    "stopTop3Posterior": 0.96,
+    "stopNormalizedEntropy": 0.24
+  },
+  "profileCalibration": {
+    "threshold": 0.3,
+    "precision": 0.9995817490494296,
+    "recall": 0.9995817490494296,
+    "jaccard": 0.9994281045751634,
+    "truePositiveFacts": 52578,
+    "falsePositiveFacts": 22,
+    "falseNegativeFacts": 22,
+    "precisionTargetFound": true
+  },
+  "metrics": {
+    "calibration_default": {
+      "sessions": 2400,
+      "top1Accuracy": 0.9991666666666666,
+      "top3Accuracy": 0.9995833333333334,
+      "averageRounds": 12.074166666666667,
+      "minimumRounds": 12,
+      "medianRounds": 12,
+      "p90Rounds": 12,
+      "maximumRounds": 21,
+      "stoppedBeforeMaximumRate": 1,
+      "forcedWrongAnswers": 0,
+      "profile": {
+        "threshold": 0.3,
+        "precision": 0.9995817490494296,
+        "recall": 0.9995817490494296,
+        "jaccard": 0.9994281045751634,
+        "truePositiveFacts": 52578,
+        "falsePositiveFacts": 22,
+        "falseNegativeFacts": 22
+      }
+    },
+    "validation_default": {
+      "sessions": 1200,
+      "top1Accuracy": 1,
+      "top3Accuracy": 1,
+      "averageRounds": 12.050833333333333,
+      "minimumRounds": 12,
+      "medianRounds": 12,
+      "p90Rounds": 12,
+      "maximumRounds": 18,
+      "stoppedBeforeMaximumRate": 1,
+      "forcedWrongAnswers": 0,
+      "profile": {
+        "threshold": 0.3,
+        "precision": 1,
+        "recall": 1,
+        "jaccard": 1,
+        "truePositiveFacts": 26300,
+        "falsePositiveFacts": 0,
+        "falseNegativeFacts": 0
+      }
+    },
+    "validation_stress": {
+      "sessions": 1200,
+      "top1Accuracy": 0.9841666666666666,
+      "top3Accuracy": 0.9916666666666667,
+      "averageRounds": 12.578333333333333,
+      "minimumRounds": 12,
+      "medianRounds": 12,
+      "p90Rounds": 14,
+      "maximumRounds": 26,
+      "stoppedBeforeMaximumRate": 0.9983333333333333,
+      "forcedWrongAnswers": 0,
+      "profile": {
+        "threshold": 0.3,
+        "precision": 0.9908776464327796,
+        "recall": 0.9912167300380228,
+        "jaccard": 0.9881792138685033,
+        "truePositiveFacts": 26069,
+        "falsePositiveFacts": 240,
+        "falseNegativeFacts": 231
+      }
+    },
+    "validation_agent": {
+      "sessions": 600,
+      "top1Accuracy": 0.9716666666666667,
+      "top3Accuracy": 0.9833333333333333,
+      "averageRounds": 12.726666666666667,
+      "minimumRounds": 12,
+      "medianRounds": 12,
+      "p90Rounds": 15,
+      "maximumRounds": 26,
+      "stoppedBeforeMaximumRate": 0.9983333333333333,
+      "forcedWrongAnswers": 0,
+      "profile": {
+        "threshold": 0.3,
+        "precision": 0.9835803876852908,
+        "recall": 0.9839543726235741,
+        "jaccard": 0.9796611007211333,
+        "truePositiveFacts": 12939,
+        "falsePositiveFacts": 216,
+        "falseNegativeFacts": 211
+      }
+    },
+    "recovery_1_wrong": {
+      "sessions": 1200,
+      "top1Accuracy": 0.9941666666666666,
+      "top3Accuracy": 0.9975,
+      "averageRounds": 12.854166666666666,
+      "minimumRounds": 12,
+      "medianRounds": 12,
+      "p90Rounds": 15,
+      "maximumRounds": 23,
+      "stoppedBeforeMaximumRate": 1,
+      "forcedWrongAnswers": 1200,
+      "profile": {
+        "threshold": 0.3,
+        "precision": 0.9969955122841713,
+        "recall": 0.9967680608365019,
+        "jaccard": 0.9957028287804149,
+        "truePositiveFacts": 26215,
+        "falsePositiveFacts": 79,
+        "falseNegativeFacts": 85
+      }
+    },
+    "recovery_2_wrong": {
+      "sessions": 1200,
+      "top1Accuracy": 0.9666666666666667,
+      "top3Accuracy": 0.9841666666666666,
+      "averageRounds": 15.785833333333333,
+      "minimumRounds": 12,
+      "medianRounds": 15,
+      "p90Rounds": 18,
+      "maximumRounds": 24,
+      "stoppedBeforeMaximumRate": 1,
+      "forcedWrongAnswers": 2400,
+      "profile": {
+        "threshold": 0.3,
+        "precision": 0.9835047619047619,
+        "recall": 0.9816349809885931,
+        "jaccard": 0.9772557178316484,
+        "truePositiveFacts": 25817,
+        "falsePositiveFacts": 433,
+        "falseNegativeFacts": 483
+      }
+    }
+  },
+  "retest": {
+    "pairs": 240,
+    "top1Agreement": 1,
+    "top3Jaccard": 0.8383333333333328,
+    "profileJaccard": 1
+  },
+  "gates": {
+    "validation_default": {
+      "top1Accuracy": {
+        "threshold": 0.85,
+        "actual": 1,
+        "passed": true
+      },
+      "top3Accuracy": {
+        "threshold": 0.95,
+        "actual": 1,
+        "passed": true
+      },
+      "averageRoundsMaximum": {
+        "threshold": 22,
+        "actual": 12.050833333333333,
+        "passed": true
+      },
+      "profilePrecision": {
+        "threshold": 0.85,
+        "actual": 1,
+        "passed": true
+      },
+      "profileRecall": {
+        "threshold": 0.75,
+        "actual": 1,
+        "passed": true
+      },
+      "profileJaccard": {
+        "threshold": 0.68,
+        "actual": 1,
+        "passed": true
+      }
+    },
+    "validation_stress": {
+      "top1Accuracy": {
+        "threshold": 0.65,
+        "actual": 0.9841666666666666,
+        "passed": true
+      },
+      "top3Accuracy": {
+        "threshold": 0.82,
+        "actual": 0.9916666666666667,
+        "passed": true
+      },
+      "averageRoundsMaximum": {
+        "threshold": 25,
+        "actual": 12.578333333333333,
+        "passed": true
+      },
+      "profilePrecision": {
+        "threshold": 0.75,
+        "actual": 0.9908776464327796,
+        "passed": true
+      },
+      "profileRecall": {
+        "threshold": 0.62,
+        "actual": 0.9912167300380228,
+        "passed": true
+      },
+      "profileJaccard": {
+        "threshold": 0.52,
+        "actual": 0.9881792138685033,
+        "passed": true
+      }
+    },
+    "validation_agent": {
+      "top1Accuracy": {
+        "threshold": 0.65,
+        "actual": 0.9716666666666667,
+        "passed": true
+      },
+      "top3Accuracy": {
+        "threshold": 0.82,
+        "actual": 0.9833333333333333,
+        "passed": true
+      },
+      "averageRoundsMaximum": {
+        "threshold": 25,
+        "actual": 12.726666666666667,
+        "passed": true
+      },
+      "profilePrecision": {
+        "threshold": 0.75,
+        "actual": 0.9835803876852908,
+        "passed": true
+      },
+      "profileRecall": {
+        "threshold": 0.62,
+        "actual": 0.9839543726235741,
+        "passed": true
+      },
+      "profileJaccard": {
+        "threshold": 0.52,
+        "actual": 0.9796611007211333,
+        "passed": true
+      }
+    },
+    "recovery_1_wrong": {
+      "top1Accuracy": {
+        "threshold": 0.75,
+        "actual": 0.9941666666666666,
+        "passed": true
+      },
+      "top3Accuracy": {
+        "threshold": 0.9,
+        "actual": 0.9975,
+        "passed": true
+      }
+    },
+    "recovery_2_wrong": {
+      "top1Accuracy": {
+        "threshold": 0.6,
+        "actual": 0.9666666666666667,
+        "passed": true
+      },
+      "top3Accuracy": {
+        "threshold": 0.8,
+        "actual": 0.9841666666666666,
+        "passed": true
+      }
+    },
+    "retest": {
+      "top1Agreement": {
+        "threshold": 0.85,
+        "actual": 1,
+        "passed": true
+      },
+      "top3Jaccard": {
+        "threshold": 0.82,
+        "actual": 0.8383333333333328,
+        "passed": true
+      },
+      "profileJaccard": {
+        "threshold": 0.8,
+        "actual": 1,
+        "passed": true
+      }
+    }
+  },
+  "gateSummary": {
+    "passed": 25,
+    "failed": 0
+  },
+  "commitments": {
+    "seed": "136fa2ad97cf12986b21d13b69bc31fb4cd5362511339ba7a54d9475c41a28e3",
+    "assignments": "c8c81b5358c8629a1d4b596e79afbbab0fa5baad707614b85a1c5415d4b78b4c",
+    "publicContext": "fa65f8ec0b4d9c908b1b469ee8d5158957151a6d3013e907ecd7dbbdd909dfee",
+    "coreMetrics": "4e49c908e54f99a7fe6d6ade95343a3a37d09c335ff3a4ca48b75c97d77ba207"
+  },
+  "audit": {
+    "valid": true,
+    "entries": 111459,
+    "head": "1326e8ddfa446f80424943172a61437c9e35c194bb37074265760d1a054411c5"
+  },
+  "reproducibility": {
+    "sourceFilesSha256": "d64f0a64f3022f7fa27be550e465b68d9c36d747cfed4da38c0bdd1a5c7820fe",
+    "resultSha256": "4e49c908e54f99a7fe6d6ade95343a3a37d09c335ff3a4ca48b75c97d77ba207"
+  }
+}

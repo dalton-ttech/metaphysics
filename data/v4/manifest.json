@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "4.0.0",
+  "corpusVersion": "2026.07.22-v4.2.1",
+  "generatedAt": "2026-07-22T00:00:00+08:00",
+  "counts": {
+    "facts": 546,
+    "mutualExclusionGroups": 33,
+    "globalEventRules": 17,
+    "calibrationClauses": 546,
+    "fateClauses": 966,
+    "calibrationByCategory": {
+      "六亲考刻": 154,
+      "定分": 392
+    },
+    "fateByCategory": {
+      "命局": 378,
+      "运限": 588
+    }
+  },
+  "files": [
+    "content-schema.json",
+    "facts.json",
+    "calibration-clauses.json",
+    "fate-clauses.json",
+    "constraints.json",
+    "event-rules.json",
+    "reference-codebook.json"
+  ]
+}

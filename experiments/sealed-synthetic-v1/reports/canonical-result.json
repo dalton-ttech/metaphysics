@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "modelVersion": "sealed-synthetic-v1.1",
+  "canonicalRunId": "2026-07-20T16-02-10-391Z-66c838a3",
+  "replayRunId": "2026-07-20T16-02-43-535Z-619e59f1",
+  "coreMetricsSha256": "86c05bc49fc562a375f6e72834d314c2ffb2d816dbe05247c10fec8452c0f5c5",
+  "questionBankSha256": "5e875e54719c7261bc142b233a6c5f4d3da5b09b67c9c2370849ee6087285882",
+  "seedCommitment": "d5d90bc7142bba301eb0d1f8d5a3cd53f0a83a6c7fdbd2ad72d566e1d845b7ea",
+  "counts": {
+    "profiles": 850,
+    "sessions": 880,
+    "validationSessions": 300,
+    "agentProfiles": 250,
+    "agentSessions": 280,
+    "ruleProfiles": 600,
+    "ruleSessions": 600
+  },
+  "thresholds": {
+    "highConfidence": 0.87,
+    "candidate": 0.21,
+    "selectedFrom": "calibration-only"
+  },
+  "validation": {
+    "highConfidencePrecision": 0.9354838709677419,
+    "highConfidenceRecall": 0.04809286898839138,
+    "candidatePrecision": 0.5291998970928736,
+    "candidateRecall": 0.6822553897180763,
+    "candidateF1": 0.5960591133004925,
+    "highConfidenceFalsePositiveRate": 0.000878348704435661,
+    "brierScore": 0.1119040919760387,
+    "averageQuestions": 22.406666666666666
+  },
+  "retest": {
+    "pairs": 30,
+    "jaccard": 0.8777777777777779
+  },
+  "simulatedComprehension": {
+    "observations": 19713,
+    "clearRate": 0.9562725105260488,
+    "method": "oracle-latent-state"
+  },
+  "calibrationRecommendation": {
+    "eventsPerQuestion": 2,
+    "interviewerPolicy": "adaptive",
+    "rankingMetric": "candidate-tier-f1"
+  },
+  "gates": {
+    "highConfidencePrecision": true,
+    "candidatePrecision": true,
+    "candidateRecall": false,
+    "highConfidenceFalsePositiveRate": true,
+    "retest": true,
+    "simulatedComprehension": true,
+    "allPassed": false
+  },
+  "reproducibility": {
+    "sameSeed": true,
+    "coreMetricsEqual": true,
+    "auditChainsValid": [true, true]
+  }
+}

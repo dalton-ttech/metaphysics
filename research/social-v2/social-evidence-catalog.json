@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1.0.0",
+  "observedAt": "2026-07-21",
+  "purpose": "event-and-language-discovery-only",
+  "prevalenceInferenceAllowed": false,
+  "records": [
+    {
+      "id": "SOC-001",
+      "platform": "Reddit",
+      "sourceType": "multi-author-first-person-thread",
+      "sourceUrl": "https://www.reddit.com/r/Life/comments/1timj2a/whats_one_event_in_your_life_that_completely/",
+      "evidenceTier": "C",
+      "eventPattern": "转学或教育环境突变后，社交信心与身份感长期下降",
+      "eventChain": ["学校环境改变", "适应失败或排斥", "自信与关系模式长期改变"],
+      "languageCues": ["换了环境以后整个人不一样", "从那以后不再像以前那样自信"],
+      "mappedEventIds": ["edu_school_transfer", "turn_identity_shift"],
+      "recommendedAction": "给 edu_school_transfer 增加创伤性变体，并在命中后验真长期影响"
+    },
+    {
+      "id": "SOC-002",
+      "platform": "Reddit",
+      "sourceType": "multi-author-first-person-thread",
+      "sourceUrl": "https://www.reddit.com/r/selfimprovement/comments/1jbfggp",
+      "evidenceTier": "C",
+      "eventPattern": "失业、被拒或项目失败后重新训练并转向新职业",
+      "eventChain": ["职业中断或拒绝", "技能重训", "职业主线改变"],
+      "languageCues": ["原来的路走不通才重新学", "被迫停下后换了一条赛道"],
+      "mappedEventIds": ["career_job_loss", "career_switch", "turn_restart"],
+      "recommendedAction": "增加职业重训事件链和单事件确认"
+    },
+    {
+      "id": "SOC-003",
+      "platform": "Reddit",
+      "sourceType": "multi-author-first-person-thread",
+      "sourceUrl": "https://www.reddit.com/r/AskPH/comments/1erbnyj",
+      "evidenceTier": "C",
+      "eventPattern": "离开原生家庭或海外生活后首次形成经济和心理自主",
+      "eventChain": ["离家或跨国迁移", "独立负担生活", "家庭边界与身份改变"],
+      "languageCues": ["真正开始靠自己生活", "离开以后才有了自己的边界"],
+      "mappedEventIds": ["move_left_hometown", "move_overseas", "turn_identity_shift"],
+      "recommendedAction": "把迁移的自主性后果作为变体，不新增顶层事件"
+    },
+    {
+      "id": "SOC-004",
+      "platform": "Reddit",
+      "sourceType": "multi-author-first-person-thread",
+      "sourceUrl": "https://www.reddit.com/r/Life/comments/1k4o2ry",
+      "evidenceTier": "C",
+      "eventPattern": "一次偶然会面或弱关系引出工作、友谊或迁居机会",
+      "eventChain": ["偶然认识或短谈", "获得机会", "职业或城市路径改变"],
+      "languageCues": ["原本只是随口聊了几句", "一个不起眼的人把路打开了"],
+      "mappedEventIds": ["social_mentor", "career_switch", "move_left_hometown"],
+      "recommendedAction": "扩展 social_mentor，覆盖非正式贵人和弱关系"
+    },
+    {
+      "id": "SOC-005",
+      "platform": "Reddit",
+      "sourceType": "multi-author-first-person-thread",
+      "sourceUrl": "https://www.reddit.com/r/AskOldPeople/comments/11rdz0r",
+      "evidenceTier": "C",
+      "eventPattern": "结婚、第一份工作、离家上学与迁居被回忆为关键日期",
+      "eventChain": ["角色或地点改变", "责任结构变化", "长期生活主线形成"],
+      "languageCues": ["那一天以后生活进入另一段", "第一次真正离开原来的世界"],
+      "mappedEventIds": ["rel_marriage", "career_early_work", "move_left_hometown"],
+      "recommendedAction": "保留现有事件，补充可辨识的时间锚点"
+    },
+    {
+      "id": "SOC-006",
+      "platform": "Reddit",
+      "sourceType": "first-person-post",
+      "sourceUrl": "https://www.reddit.com/r/inheritance/comments/1so4dhs/family_inheritance_situation_involving/",
+      "evidenceTier": "C",
+      "eventPattern": "遗产分配与断亲、照护旧账及财务失控相互纠缠",
+      "eventChain": ["亲属离世或遗产出现", "照护和旧关系冲突被翻出", "家庭关系与财务安排破裂"],
+      "languageCues": ["争的不是一笔钱而是多年的旧账", "遗产把已经疏远的家人重新拉回冲突"],
+      "mappedEventIds": ["turn_inheritance", "fam_caregiving", "social_major_conflict"],
+      "recommendedAction": "遗产宽筛命中后分别确认资产承接与家庭纠纷"
+    },
+    {
+      "id": "SOC-007",
+      "platform": "知乎",
+      "sourceType": "first-person-answer",
+      "sourceUrl": "https://www.zhihu.com/question/54962217/answer/782432538",
+      "evidenceTier": "C",
+      "eventPattern": "家庭成员失业、收入下降、疾病或离世叠加成长时间线",
+      "eventChain": ["家庭收入中断", "生活条件收紧", "疾病或离世加重责任"],
+      "languageCues": ["家里的收入一下少了很多", "几件事挤在同一段时间发生"],
+      "mappedEventIds": ["fam_financial_fall", "career_job_loss", "turn_close_death", "fam_early_burden"],
+      "recommendedAction": "允许同一回答激活事件链候选，但逐项验真"
+    },
+    {
+      "id": "SOC-008",
+      "platform": "知乎",
+      "sourceType": "first-person-article",
+      "sourceUrl": "https://www.zhihu.com/en/article/578955364",
+      "evidenceTier": "C",
+      "eventPattern": "企业扩张后现金流断裂，继而关停、裁员、个人负债和家庭压力",
+      "eventChain": ["经营扩张或投资", "现金流中断", "关停或裁员", "债务与家庭负担"],
+      "languageCues": ["资金链断了", "公司撑不下去", "工资和贷款一起压过来"],
+      "mappedEventIds": ["career_entrepreneurship", "wealth_bankruptcy", "career_job_loss", "wealth_debt"],
+      "recommendedAction": "破产题加入经营性语言，命中后确认债务与关停两个事实"
+    },
+    {
+      "id": "SOC-009",
+      "platform": "豆瓣",
+      "sourceType": "first-person-group-post",
+      "sourceUrl": "https://www.douban.com/group/topic/343712408/",
+      "evidenceTier": "C",
+      "eventPattern": "公司倒闭或失业后降级住房、承受助学贷款，并在疾病与社保约束下求职",
+      "eventChain": ["工作或公司中断", "搬到更便宜住所", "债务与医疗保障限制选择"],
+      "languageCues": ["先把房租降下来", "为了社保不敢轻易停工", "工作没了但账单没有停"],
+      "mappedEventIds": ["career_job_loss", "wealth_debt", "health_chronic", "move_repeated"],
+      "recommendedAction": "增加冲击后的生活降级变体；不单独新增事件"
+    },
+    {
+      "id": "SOC-010",
+      "platform": "豆瓣",
+      "sourceType": "first-person-group-post",
+      "sourceUrl": "https://www.douban.com/group/topic/286788392/",
+      "evidenceTier": "C",
+      "eventPattern": "老人离世后出售祖宅，同时进入父母养老和重病决策阶段",
+      "eventChain": ["长辈离世", "祖宅或家庭据点处置", "承担养老与医疗决策"],
+      "languageCues": ["老房子卖掉以后才觉得一个时代结束", "开始要替父母做医疗和养老决定"],
+      "mappedEventIds": ["turn_close_death", "turn_inheritance", "fam_caregiving", "wealth_property"],
+      "recommendedAction": "增加祖宅处置与重大照护决策两个事件变体"
+    },
+    {
+      "id": "SOC-011",
+      "platform": "豆瓣",
+      "sourceType": "first-person-group-post",
+      "sourceUrl": "https://www.douban.com/group/topic/276784808/",
+      "evidenceTier": "C",
+      "eventPattern": "亲属要求放弃遗产并用房产为兄弟债务抵押，最终断联和搬离",
+      "eventChain": ["亲属债务", "遗产或房产被要求让渡", "亲属集体施压", "断联或搬离"],
+      "languageCues": ["全家都来让我签字", "那套房既是遗产也是债务风险", "只有搬走和不联系才能保住边界"],
+      "mappedEventIds": ["turn_inheritance", "wealth_debt", "fam_sibling_duty", "social_major_conflict", "move_repeated"],
+      "recommendedAction": "将家庭财务索取和边界决裂作为链式变体，遗产命中后验真"
+    },
+    {
+      "id": "SOC-012",
+      "platform": "豆瓣",
+      "sourceType": "first-person-group-post-and-comments",
+      "sourceUrl": "https://www.douban.com/group/topic/265908785/",
+      "evidenceTier": "C",
+      "eventPattern": "伴侣背叛或成瘾导致分居离婚、经济净身和独自育儿，随后职业跃升",
+      "eventChain": ["信任破裂", "长期分居或离婚", "经济与育儿重担", "重新就业或职业跃升"],
+      "languageCues": ["关系其实早已结束，只是手续还没办", "离开时几乎什么都没有", "重新工作把生活一点点立起来"],
+      "mappedEventIds": ["rel_betrayal", "rel_divorce", "wealth_family_support", "career_major_achievement", "turn_restart"],
+      "recommendedAction": "婚变题覆盖实质破裂；宽筛后依次确认背叛、分居/离婚和重启"
+    },
+    {
+      "id": "SOC-013",
+      "platform": "豆瓣阅读",
+      "sourceType": "first-person-narrative-column",
+      "sourceUrl": "https://read.douban.com/reader/column/3370961/chapter/20730366/",
+      "evidenceTier": "C",
+      "eventPattern": "青少年时期全家迁居，失去原有社会世界并长期适应困难",
+      "eventChain": ["全家迁居", "同伴和故乡联系断裂", "适应与归属困难"],
+      "languageCues": ["不是换个住处，而是原来的世界突然没了", "很久以后仍觉得自己没有真正属于哪里"],
+      "mappedEventIds": ["move_repeated", "edu_school_transfer", "turn_identity_shift"],
+      "recommendedAction": "迁居命中后区分主动迁移与被动失根"
+    },
+    {
+      "id": "SOC-014",
+      "platform": "豆瓣",
+      "sourceType": "reader-annotation-first-person-content",
+      "sourceUrl": "https://book.douban.com/people/214952893/annotation/36698410/",
+      "evidenceTier": "C",
+      "eventPattern": "父母外出务工造成留守，后来严重疾病和全家筹资改变价值排序",
+      "eventChain": ["父母长期离场", "本人或家人重病", "家庭集中财务救援", "价值观改变"],
+      "languageCues": ["小时候长期见不到父母", "一场病把全家的钱和注意力都聚到一起", "病后看事情的顺序变了"],
+      "mappedEventIds": ["fam_parental_distance", "health_hospital", "wealth_family_support", "turn_identity_shift"],
+      "recommendedAction": "补充留守和全家筹资变体，命中后分别验真"
+    }
+  ],
+  "crossSourcePatterns": [
+    {
+      "pattern": "economic-shock-chain",
+      "supportingRecordIds": ["SOC-002", "SOC-007", "SOC-008", "SOC-009"],
+      "evidenceTier": "B",
+      "conclusion": "职业中断、现金流断裂、生活降级与重启经常形成链，而非单一事件"
+    },
+    {
+      "pattern": "inheritance-family-boundary-chain",
+      "supportingRecordIds": ["SOC-006", "SOC-010", "SOC-011"],
+      "evidenceTier": "B",
+      "conclusion": "遗产常与照护旧账、亲属施压、房产和断亲共同出现"
+    },
+    {
+      "pattern": "migration-identity-chain",
+      "supportingRecordIds": ["SOC-001", "SOC-003", "SOC-013"],
+      "evidenceTier": "B",
+      "conclusion": "迁移既可能带来自主，也可能造成失根；需验真方向和长期影响"
+    },
+    {
+      "pattern": "relationship-collapse-restart-chain",
+      "supportingRecordIds": ["SOC-002", "SOC-012"],
+      "evidenceTier": "B",
+      "conclusion": "背叛、实质分居、经济压力与职业重启应拆成可分别确认的节点"
+    }
+  ]
+}

@@ -1,0 +1,906 @@
+{
+  "version": "tieban-clause-codebook-v1",
+  "clauses": [
+    {
+      "id": "TB3-001",
+      "primaryFactId": "fact:fam_early_burden",
+      "domain": "family",
+      "label": "早担家责",
+      "proposition": "少年或青年阶段较早承担家庭责任。",
+      "text": "你是否比同龄人更早替家里扛事、做决定或照顾他人？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-002",
+      "primaryFactId": "fact:fam_parental_distance",
+      "domain": "family",
+      "label": "父母关系疏离",
+      "proposition": "父母长期冲突、分居、离异，或与一方关系明显疏远。",
+      "text": "你的成长中，父母是否长期不和、分开，或你与其中一方明显疏远？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-003",
+      "primaryFactId": "fact:fam_financial_fall",
+      "domain": "family",
+      "label": "家运骤落",
+      "proposition": "家庭经济状况在成长阶段出现明显下降。",
+      "text": "你的家庭是否曾经历收入骤降、负债或生活条件明显收紧？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-004",
+      "primaryFactId": "fact:fam_elder_loss",
+      "domain": "family",
+      "label": "早年失长辈",
+      "proposition": "较早经历重要长辈离世或长期缺席。",
+      "text": "你是否较早失去一位对你很重要的长辈，或经历其长期离场？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-005",
+      "primaryFactId": "fact:fam_sibling_duty",
+      "domain": "family",
+      "label": "手足牵责",
+      "proposition": "长期照应兄弟姐妹，或因手足关系承担额外责任。",
+      "text": "你是否长期替兄弟姐妹操心、出力或承担他们带来的责任？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 3,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-006",
+      "primaryFactId": "fact:fam_caregiving",
+      "domain": "family",
+      "label": "长期照护",
+      "proposition": "曾持续照顾患病、年迈或处于困境中的家人。",
+      "text": "你是否有过一段持续数月以上、以照护家人为中心的生活？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-007",
+      "primaryFactId": "fact:edu_school_transfer",
+      "domain": "education_mobility",
+      "label": "转学换境",
+      "proposition": "成长阶段有过明显转学或教育环境变化。",
+      "text": "你是否在中小学阶段转过学，或进入过差异很大的教育环境？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 3,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-008",
+      "primaryFactId": "fact:edu_study_interruption",
+      "domain": "education_mobility",
+      "label": "学业中断",
+      "proposition": "升学路径曾中断、延期或明显偏离原计划。",
+      "text": "你的学业是否曾因家庭、健康、经济或个人选择而中断、延期或改道？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-009",
+      "primaryFactId": "fact:edu_exam_turn",
+      "domain": "education_mobility",
+      "label": "考试转折",
+      "proposition": "一场重要考试或录取结果显著改变人生路径。",
+      "text": "是否有一场关键考试、落榜或录取，明显改变了你之后的道路？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-010",
+      "primaryFactId": "fact:move_left_hometown",
+      "domain": "education_mobility",
+      "label": "离乡发展",
+      "proposition": "为了求学或工作离开成长地，并长期生活在外。",
+      "text": "你是否因求学或工作长期离开成长地，并在异地建立生活？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-011",
+      "primaryFactId": "fact:move_repeated",
+      "domain": "education_mobility",
+      "label": "多次迁居",
+      "proposition": "人生中多次跨城市或大范围迁居。",
+      "text": "你是否有过三次以上明显迁居，且其中至少一次改变了生活主线？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-012",
+      "primaryFactId": "fact:move_overseas",
+      "domain": "education_mobility",
+      "label": "海外经历",
+      "proposition": "曾长期出国学习、工作或定居。",
+      "text": "你是否曾在海外连续生活、求学或工作半年以上？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-013",
+      "primaryFactId": "fact:career_early_work",
+      "domain": "career",
+      "label": "较早工作",
+      "proposition": "比同龄人更早进入工作或挣钱状态。",
+      "text": "你是否比多数同龄人更早开始稳定工作、兼职养活自己或补贴家庭？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-014",
+      "primaryFactId": "fact:career_switch",
+      "domain": "career",
+      "label": "职业转轨",
+      "proposition": "至少一次跨行业或职业方向的明显转变。",
+      "text": "你是否有过一次真正意义上的转行，而不只是换公司或岗位？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-015",
+      "primaryFactId": "fact:career_leadership",
+      "domain": "career",
+      "label": "掌事带人",
+      "proposition": "曾担任管理者、负责人或关键决策角色。",
+      "text": "你是否正式承担过带团队、定目标或为关键结果负责的角色？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-016",
+      "primaryFactId": "fact:career_entrepreneurship",
+      "domain": "career",
+      "label": "创业自营",
+      "proposition": "曾创业、经营生意或以自己为主承担商业结果。",
+      "text": "你是否真正创业、经营生意或以独立项目承担过主要盈亏？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-017",
+      "primaryFactId": "fact:career_job_loss",
+      "domain": "career",
+      "label": "被动失业",
+      "proposition": "曾经历裁员、被辞退或非自愿的职业中断。",
+      "text": "你是否经历过裁员、被辞退，或一段非自愿的较长失业？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-018",
+      "primaryFactId": "fact:career_major_achievement",
+      "domain": "career",
+      "label": "事业跃升",
+      "proposition": "曾有一次明显晋升、成名或成果突破。",
+      "text": "你是否有过一次明显晋升、重要奖项、项目成功或事业影响力跃升？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-019",
+      "primaryFactId": "fact:wealth_income_leap",
+      "domain": "wealth",
+      "label": "收入跃升",
+      "proposition": "收入或资产曾在短期内显著增加。",
+      "text": "你是否曾在一两年内出现收入、利润或资产的明显跃升？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-020",
+      "primaryFactId": "fact:wealth_debt",
+      "domain": "wealth",
+      "label": "债务压力",
+      "proposition": "曾承受显著负债或长期还款压力。",
+      "text": "你是否有过持续一年以上、明显影响生活选择的债务或还款压力？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-021",
+      "primaryFactId": "fact:wealth_investment_loss",
+      "domain": "wealth",
+      "label": "投资重损",
+      "proposition": "投资、合伙或投机曾造成明显损失。",
+      "text": "你是否因投资、合伙、借款或投机经历过一次明显财务损失？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-022",
+      "primaryFactId": "fact:wealth_property",
+      "domain": "wealth",
+      "label": "置业成家",
+      "proposition": "曾购置重要房产，或房产成为人生关键节点。",
+      "text": "你是否购买过重要房产，或因房产交易明显改变家庭与财务安排？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-023",
+      "primaryFactId": "fact:wealth_family_support",
+      "domain": "wealth",
+      "label": "长期供养家庭",
+      "proposition": "长期承担父母、子女或亲属的重要经济支出。",
+      "text": "你的收入是否长期有较大部分用于供养父母、子女或其他亲属？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-024",
+      "primaryFactId": "fact:wealth_bankruptcy",
+      "domain": "wealth",
+      "label": "破产或资不抵债",
+      "proposition": "本人、家庭或所经营事业曾接近或进入破产状态。",
+      "text": "你本人、家庭或经营的事业，是否经历过破产、清算或接近资不抵债？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-025",
+      "primaryFactId": "fact:rel_formative_love",
+      "domain": "relationship",
+      "label": "早年深情",
+      "proposition": "较早经历一段影响深远的恋爱或情感牵引。",
+      "text": "你是否较早经历过一段很深、并长期影响你的感情？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-026",
+      "primaryFactId": "fact:rel_long_single",
+      "domain": "relationship",
+      "label": "长期单身",
+      "proposition": "成年后有过较长的主动或被动单身期。",
+      "text": "成年后你是否有过连续三年以上、几乎没有稳定关系的时期？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 3,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-027",
+      "primaryFactId": "fact:rel_major_breakup",
+      "domain": "relationship",
+      "label": "重大分手",
+      "proposition": "一段重要关系的结束造成长期影响。",
+      "text": "你是否经历过一次对生活、性格或之后关系影响很大的分手？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-028",
+      "primaryFactId": "fact:rel_marriage",
+      "domain": "relationship",
+      "label": "进入婚姻",
+      "proposition": "曾登记结婚、举办婚礼或进入事实婚姻。",
+      "text": "你是否已经进入或曾经进入婚姻、长期事实婚姻？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-029",
+      "primaryFactId": "fact:rel_divorce",
+      "domain": "relationship",
+      "label": "婚姻离合",
+      "proposition": "曾离婚、长期分居或经历婚姻实质破裂。",
+      "text": "你是否经历过离婚、长期分居，或婚姻关系实质性破裂？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-030",
+      "primaryFactId": "fact:rel_betrayal",
+      "domain": "relationship",
+      "label": "信任破裂",
+      "proposition": "亲密关系中曾经历出轨、欺骗或严重背叛。",
+      "text": "你是否在重要关系中经历过出轨、长期欺骗或严重信任破裂？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-031",
+      "primaryFactId": "fact:health_hospital",
+      "domain": "health",
+      "label": "住院或手术",
+      "proposition": "本人曾因疾病或身体问题住院、手术。",
+      "text": "你是否因疾病或身体问题住院、手术，或接受过较重治疗？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-032",
+      "primaryFactId": "fact:health_chronic",
+      "domain": "health",
+      "label": "长期慢性问题",
+      "proposition": "存在持续较久、反复影响生活的身体问题。",
+      "text": "你是否有持续一年以上、反复影响生活或工作的慢性身体问题？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-033",
+      "primaryFactId": "fact:health_accident",
+      "domain": "health",
+      "label": "严重意外",
+      "proposition": "经历过交通、运动、工作或其他较严重意外伤害。",
+      "text": "你是否经历过需要治疗、休养或明显改变生活的严重意外伤害？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-034",
+      "primaryFactId": "fact:health_burnout",
+      "domain": "health",
+      "label": "身心耗竭",
+      "proposition": "曾因长期压力出现明显失眠、焦虑、抑郁或耗竭。",
+      "text": "你是否经历过一段持续数月、明显影响睡眠、情绪或工作能力的身心耗竭？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-035",
+      "primaryFactId": "fact:health_reproductive",
+      "domain": "health",
+      "label": "生育关口",
+      "proposition": "本人或伴侣经历怀孕、流产、难孕或生育相关重大事件。",
+      "text": "你本人或伴侣是否经历过怀孕、生育、流产、难孕或相关的重要治疗？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-036",
+      "primaryFactId": "fact:health_recovery",
+      "domain": "health",
+      "label": "大病后恢复",
+      "proposition": "曾从严重健康、心理或身体低谷中逐步恢复。",
+      "text": "你是否经历过一次较长的康复期，并因此改变生活习惯或人生排序？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-037",
+      "primaryFactId": "fact:law_dispute",
+      "domain": "law_social",
+      "label": "诉讼纠纷",
+      "proposition": "本人或家庭曾卷入重要诉讼、仲裁或法律争议。",
+      "text": "你本人或家庭是否经历过诉讼、仲裁、报警处理或重要法律纠纷？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-038",
+      "primaryFactId": "fact:law_crime_contact",
+      "domain": "law_social",
+      "label": "刑事事件牵连",
+      "proposition": "本人或近亲曾涉及刑事调查、拘留、服刑或重大犯罪事件。",
+      "text": "你本人或近亲是否曾涉及刑事调查、拘留、服刑或重大犯罪事件？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-039",
+      "primaryFactId": "fact:social_reputation_crisis",
+      "domain": "law_social",
+      "label": "名誉风波",
+      "proposition": "曾遭遇公开指责、舆论危机或严重名誉损伤。",
+      "text": "你是否遭遇过公开指责、网络舆论、单位处分或严重名誉危机？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-040",
+      "primaryFactId": "fact:social_major_conflict",
+      "domain": "law_social",
+      "label": "重大人际冲突",
+      "proposition": "与亲友、同事或合作方有过长期且重大的冲突。",
+      "text": "你是否与亲友、同事或合作方经历过持续较久、影响很大的冲突？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-041",
+      "primaryFactId": "fact:social_mentor",
+      "domain": "law_social",
+      "label": "贵人提携",
+      "proposition": "关键阶段曾得到一位重要人物的明显帮助与提携。",
+      "text": "你是否在关键阶段得到一位老师、上级、长辈或合作伙伴的实质性提携？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-042",
+      "primaryFactId": "fact:social_partnership_break",
+      "domain": "law_social",
+      "label": "合作决裂",
+      "proposition": "商业或事业合作因利益、信任而重大破裂。",
+      "text": "你是否与重要合伙人或事业伙伴因利益、控制权或信任而决裂？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-043",
+      "primaryFactId": "fact:turn_child_arrival",
+      "domain": "turning_point",
+      "label": "子女到来",
+      "proposition": "子女出生或成为主要照顾者，显著改变人生结构。",
+      "text": "子女的出生或长期照顾孩子，是否明显改变了你的人生排序？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-044",
+      "primaryFactId": "fact:turn_close_death",
+      "domain": "turning_point",
+      "label": "至亲离世",
+      "proposition": "成年后经历父母、伴侣、子女或极亲近之人离世。",
+      "text": "你是否经历过父母、伴侣、子女或极亲近之人的离世，并因此长期改变？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-045",
+      "primaryFactId": "fact:turn_inheritance",
+      "domain": "turning_point",
+      "label": "继承与遗产",
+      "proposition": "遗产、家业或重大资产承接影响了人生方向。",
+      "text": "你是否因遗产、家业或重大资产承接，明显改变财务与家庭责任？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-046",
+      "primaryFactId": "fact:turn_spiritual",
+      "domain": "turning_point",
+      "label": "信念转向",
+      "proposition": "因经历重大事件而转向宗教、玄学、心理或精神探索。",
+      "text": "你是否因某次重大经历，持续转向宗教、玄学、心理或精神探索？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-047",
+      "primaryFactId": "fact:turn_restart",
+      "domain": "turning_point",
+      "label": "崩塌后重启",
+      "proposition": "在事业、关系、财富或健康重大崩塌后重新开始。",
+      "text": "你是否在事业、关系、财务或健康重大崩塌后，真正重新建立过生活？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-048",
+      "primaryFactId": "fact:turn_identity_shift",
+      "domain": "turning_point",
+      "label": "身份重塑",
+      "proposition": "某次经历后价值观、身份认同或生活方式发生根本改变。",
+      "text": "你是否经历过一次让价值观、身份认同或生活方式根本改变的事件？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-049",
+      "primaryFactId": "fact:career_early_work_before_18",
+      "domain": "career",
+      "label": "十八岁前已工作",
+      "proposition": "在十八岁以前已经开始稳定工作或持续挣钱。",
+      "text": "较同龄人更早入世，只核年龄：十八岁以前是否已持续工作或挣钱？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-050",
+      "primaryFactId": "fact:move_left_hometown_before_22",
+      "domain": "education_mobility",
+      "label": "二十二岁前离乡",
+      "proposition": "在二十二岁以前已离开成长地长期发展。",
+      "text": "故土之外另起一程，只核年龄：二十二岁以前是否已长期离乡？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-051",
+      "primaryFactId": "fact:edu_school_transfer_before_12",
+      "domain": "education_mobility",
+      "label": "十二岁前转学",
+      "proposition": "在十二岁以前有过明显转学或教育环境变化。",
+      "text": "书案早换，只核年龄：十二岁以前是否转学或明显更换教育环境？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 3,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-052",
+      "primaryFactId": "fact:health_hospital_before_18",
+      "domain": "health",
+      "label": "十八岁前住院手术",
+      "proposition": "在十八岁以前曾住院、手术或接受较重治疗。",
+      "text": "少时身有一关，只核年龄：十八岁以前是否住院、手术或接受较重治疗？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-053",
+      "primaryFactId": "fact:rel_formative_love_before_20",
+      "domain": "relationship",
+      "label": "二十岁前深刻感情",
+      "proposition": "在二十岁以前已有一段长期影响自己的深刻感情。",
+      "text": "情印来得较早，只核年龄：二十岁以前是否已有一段长期影响你的感情？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-054",
+      "primaryFactId": "fact:rel_marriage_before_28",
+      "domain": "relationship",
+      "label": "二十八岁前成婚",
+      "proposition": "在二十八岁以前已经进入婚姻或事实婚姻。",
+      "text": "家门较早成形，只核年龄：二十八岁以前是否已经进入婚姻？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-055",
+      "primaryFactId": "fact:turn_child_arrival_before_30",
+      "domain": "turning_point",
+      "label": "三十岁前育儿",
+      "proposition": "在三十岁以前已有子女或成为孩子的主要照顾者。",
+      "text": "子息较早入局，只核年龄：三十岁以前是否已有子女或主要照顾孩子？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "private"
+    },
+    {
+      "id": "TB3-056",
+      "primaryFactId": "fact:career_switch_before_30",
+      "domain": "career",
+      "label": "三十岁前转行",
+      "proposition": "在三十岁以前已经发生过一次真正的职业转轨。",
+      "text": "业路早改，只核年龄：三十岁以前是否已经真正转过行业或职业主线？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-057",
+      "primaryFactId": "fact:career_leadership_before_35",
+      "domain": "career",
+      "label": "三十五岁前带团队",
+      "proposition": "在三十五岁以前已正式承担带团队或关键决策责任。",
+      "text": "掌事不算迟，只核年龄：三十五岁以前是否已正式带团队或负责关键结果？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 4,
+      "sensitivity": "ordinary"
+    },
+    {
+      "id": "TB3-058",
+      "primaryFactId": "fact:wealth_debt_before_30",
+      "domain": "wealth",
+      "label": "三十岁前有长期债务",
+      "proposition": "在三十岁以前已承受持续一年以上的明显债务压力。",
+      "text": "财路早逢逆水，只核年龄：三十岁以前是否已有持续一年以上的明显债务？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-059",
+      "primaryFactId": "fact:turn_close_death_before_30",
+      "domain": "turning_point",
+      "label": "三十岁前经历至亲离世",
+      "proposition": "在三十岁以前经历过至亲离世并受到长期影响。",
+      "text": "别离来得较早，只核年龄：三十岁以前是否经历至亲离世并长期受其影响？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    },
+    {
+      "id": "TB3-060",
+      "primaryFactId": "fact:turn_restart_before_35",
+      "domain": "turning_point",
+      "label": "三十五岁前重大重启",
+      "proposition": "在三十五岁以前已在重大崩塌后重新建立生活。",
+      "text": "旧局早破又立，只核年龄：三十五岁以前是否已在重大崩塌后重建生活？ 只按这一件事实作答：相应则答“应”，不相应答“不应”，确实记不清答“未明”。",
+      "answerOptions": [
+        "应",
+        "不应",
+        "未明"
+      ],
+      "salience": 5,
+      "sensitivity": "intense"
+    }
+  ],
+  "hash": "56e94ce926cf4c475e40e6fd6eb2a7ff23e80de77549f0ef7473e9fb16d2a54c"
+}

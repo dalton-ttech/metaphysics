@@ -1,0 +1,11 @@
+{
+  "name": "sealed-tieban-v3",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/v3.test.mjs",
+    "run": "node runner/run-experiment.mjs",
+    "reconcile": "node runner/reconcile-locked-report.mjs"
+  }
+}

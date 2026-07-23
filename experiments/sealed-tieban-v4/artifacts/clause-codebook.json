@@ -1,0 +1,782 @@
+[
+  {
+    "id": "TB4-001",
+    "primaryFactId": "fact:fam_early_burden",
+    "factIndex": 0,
+    "domain": "family",
+    "proposition": "少年承担家计",
+    "text": "旧事只取一证：少年时是否较早承担家计或照顾家人？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-002",
+    "primaryFactId": "fact:fam_parental_distance",
+    "factIndex": 1,
+    "domain": "family",
+    "proposition": "亲子关系长期疏离",
+    "text": "旧事只取一证：与父母一方是否有过多年疏离或难以沟通？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-003",
+    "primaryFactId": "fact:fam_financial_fall",
+    "factIndex": 2,
+    "domain": "family",
+    "proposition": "原生家庭财势骤变",
+    "text": "旧事只取一证：成长阶段家中经济是否经历过明显下坠？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-004",
+    "primaryFactId": "fact:fam_elder_loss",
+    "factIndex": 3,
+    "domain": "family",
+    "proposition": "早年失去重要长辈",
+    "text": "旧事只取一证：较年轻时是否失去过深刻影响你的长辈？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-005",
+    "primaryFactId": "fact:fam_sibling_duty",
+    "factIndex": 4,
+    "domain": "family",
+    "proposition": "长期替手足担责",
+    "text": "旧事只取一证：是否长期替兄弟姐妹承担责任或收拾局面？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-006",
+    "primaryFactId": "fact:fam_caregiving",
+    "factIndex": 5,
+    "domain": "family",
+    "proposition": "长期照护家人",
+    "text": "旧事只取一证：是否有过持续照护病弱或年长家人的阶段？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-007",
+    "primaryFactId": "fact:edu_school_transfer",
+    "factIndex": 6,
+    "domain": "education_mobility",
+    "proposition": "求学环境明显更换",
+    "text": "旧事只取一证：求学阶段是否有过转学或教育环境的大幅更换？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-008",
+    "primaryFactId": "fact:edu_study_interruption",
+    "factIndex": 7,
+    "domain": "education_mobility",
+    "proposition": "学业中断后续接",
+    "text": "旧事只取一证：学业是否曾中断，后来又以别的方式续上？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-009",
+    "primaryFactId": "fact:edu_exam_turn",
+    "factIndex": 8,
+    "domain": "education_mobility",
+    "proposition": "一次考试改变路径",
+    "text": "旧事只取一证：是否有一次重要考试明显改变了后来道路？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-010",
+    "primaryFactId": "fact:move_left_hometown",
+    "factIndex": 9,
+    "domain": "education_mobility",
+    "proposition": "离开故乡长期发展",
+    "text": "旧事只取一证：是否离开成长地，并在外地长期生活发展？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-011",
+    "primaryFactId": "fact:move_repeated",
+    "factIndex": 10,
+    "domain": "education_mobility",
+    "proposition": "多次迁居转换城市",
+    "text": "旧事只取一证：成年后是否多次迁居或转换主要生活城市？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-012",
+    "primaryFactId": "fact:move_overseas",
+    "factIndex": 11,
+    "domain": "education_mobility",
+    "proposition": "长期海外生活",
+    "text": "旧事只取一证：是否有过较长期的海外学习、工作或生活？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-013",
+    "primaryFactId": "fact:career_early_work",
+    "factIndex": 12,
+    "domain": "career",
+    "proposition": "较早进入工作",
+    "text": "旧事只取一证：是否比同龄人更早开始持续工作或挣钱？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-014",
+    "primaryFactId": "fact:career_switch",
+    "factIndex": 13,
+    "domain": "career",
+    "proposition": "职业主线转轨",
+    "text": "旧事只取一证：是否有过一次真正改变主线的转行？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-015",
+    "primaryFactId": "fact:career_leadership",
+    "factIndex": 14,
+    "domain": "career",
+    "proposition": "承担团队决策",
+    "text": "旧事只取一证：是否正式带过团队或承担关键决策结果？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-016",
+    "primaryFactId": "fact:career_entrepreneurship",
+    "factIndex": 15,
+    "domain": "career",
+    "proposition": "独立创业经营",
+    "text": "旧事只取一证：是否亲自创办或独立经营过一项事业？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-017",
+    "primaryFactId": "fact:career_job_loss",
+    "factIndex": 16,
+    "domain": "career",
+    "proposition": "非自愿失去工作",
+    "text": "旧事只取一证：是否经历过裁撤、解雇或其他非自愿失业？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-018",
+    "primaryFactId": "fact:career_major_achievement",
+    "factIndex": 17,
+    "domain": "career",
+    "proposition": "事业阶段性跃升",
+    "text": "旧事只取一证：是否有过一次被外界明确认可的事业跃升？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-019",
+    "primaryFactId": "fact:wealth_income_leap",
+    "factIndex": 18,
+    "domain": "wealth",
+    "proposition": "收入出现明显跃升",
+    "text": "旧事只取一证：收入是否曾在较短阶段出现明显跃升？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-020",
+    "primaryFactId": "fact:wealth_debt",
+    "factIndex": 19,
+    "domain": "wealth",
+    "proposition": "长期债务压力",
+    "text": "旧事只取一证：是否承受过持续一年以上的明显债务压力？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-021",
+    "primaryFactId": "fact:wealth_investment_loss",
+    "factIndex": 20,
+    "domain": "wealth",
+    "proposition": "投资遭遇重大损失",
+    "text": "旧事只取一证：是否因投资或经营判断承受过重大损失？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-022",
+    "primaryFactId": "fact:wealth_property",
+    "factIndex": 21,
+    "domain": "wealth",
+    "proposition": "取得重要不动产",
+    "text": "旧事只取一证：是否已取得对生活意义重大的房产或不动产？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-023",
+    "primaryFactId": "fact:wealth_family_support",
+    "factIndex": 22,
+    "domain": "wealth",
+    "proposition": "长期资助家庭",
+    "text": "旧事只取一证：是否长期以收入或资产支持原生家庭？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-024",
+    "primaryFactId": "fact:wealth_bankruptcy",
+    "factIndex": 23,
+    "domain": "wealth",
+    "proposition": "资不抵债后重整",
+    "text": "旧事只取一证：是否经历过资不抵债、停业或近似破产的重整？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-025",
+    "primaryFactId": "fact:rel_formative_love",
+    "factIndex": 24,
+    "domain": "relationship",
+    "proposition": "一段感情影响多年",
+    "text": "旧事只取一证：是否有一段感情在结束或变化后仍影响你多年？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-026",
+    "primaryFactId": "fact:rel_long_single",
+    "factIndex": 25,
+    "domain": "relationship",
+    "proposition": "较长时间主动独身",
+    "text": "旧事只取一证：成年后是否有过较长时间主动保持单身？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-027",
+    "primaryFactId": "fact:rel_major_breakup",
+    "factIndex": 26,
+    "domain": "relationship",
+    "proposition": "重大分手改变生活",
+    "text": "旧事只取一证：是否有一次分手明显改变了生活方向？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-028",
+    "primaryFactId": "fact:rel_marriage",
+    "factIndex": 27,
+    "domain": "relationship",
+    "proposition": "进入婚姻关系",
+    "text": "旧事只取一证：是否已经进入过婚姻或事实婚姻？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-029",
+    "primaryFactId": "fact:rel_divorce",
+    "factIndex": 28,
+    "domain": "relationship",
+    "proposition": "婚姻正式破裂",
+    "text": "旧事只取一证：是否经历过离婚或事实婚姻的正式破裂？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-030",
+    "primaryFactId": "fact:rel_betrayal",
+    "factIndex": 29,
+    "domain": "relationship",
+    "proposition": "亲密关系遭遇背叛",
+    "text": "旧事只取一证：亲密关系中是否经历过足以改变信任的背叛？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-031",
+    "primaryFactId": "fact:health_hospital",
+    "factIndex": 30,
+    "domain": "health",
+    "proposition": "住院手术或重治疗",
+    "text": "旧事只取一证：是否有过住院、手术或较重治疗的经历？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-032",
+    "primaryFactId": "fact:health_chronic",
+    "factIndex": 31,
+    "domain": "health",
+    "proposition": "长期慢性健康困扰",
+    "text": "旧事只取一证：是否有持续多年、需要管理的慢性健康困扰？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-033",
+    "primaryFactId": "fact:health_accident",
+    "factIndex": 32,
+    "domain": "health",
+    "proposition": "意外伤害留下影响",
+    "text": "旧事只取一证：是否有一次意外伤害留下较长影响？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-034",
+    "primaryFactId": "fact:health_burnout",
+    "factIndex": 33,
+    "domain": "health",
+    "proposition": "身心耗竭被迫停步",
+    "text": "旧事只取一证：是否因身心耗竭而被迫停工、休学或长期调整？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-035",
+    "primaryFactId": "fact:health_reproductive",
+    "factIndex": 34,
+    "domain": "health",
+    "proposition": "生育相关重大经历",
+    "text": "旧事只取一证：是否经历过对你影响明显的怀孕、生育或生殖健康事件？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-036",
+    "primaryFactId": "fact:health_recovery",
+    "factIndex": 35,
+    "domain": "health",
+    "proposition": "重病低谷后恢复",
+    "text": "旧事只取一证：是否从一次较重健康低谷中逐步恢复？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-037",
+    "primaryFactId": "fact:law_dispute",
+    "factIndex": 36,
+    "domain": "legal_social",
+    "proposition": "卷入正式法律纠纷",
+    "text": "旧事只取一证：是否卷入过诉讼、仲裁或正式法律纠纷？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-038",
+    "primaryFactId": "fact:law_crime_contact",
+    "factIndex": 37,
+    "domain": "legal_social",
+    "proposition": "接触刑事调查程序",
+    "text": "旧事只取一证：是否本人或至近之人接触过刑事调查程序？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-039",
+    "primaryFactId": "fact:social_reputation_crisis",
+    "factIndex": 38,
+    "domain": "legal_social",
+    "proposition": "名誉遭遇公开危机",
+    "text": "旧事只取一证：是否经历过公开误解、舆论或名誉危机？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-040",
+    "primaryFactId": "fact:social_major_conflict",
+    "factIndex": 39,
+    "domain": "legal_social",
+    "proposition": "重要关系严重冲突",
+    "text": "旧事只取一证：是否与重要亲友或同事发生过长期严重冲突？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-041",
+    "primaryFactId": "fact:social_mentor",
+    "factIndex": 40,
+    "domain": "legal_social",
+    "proposition": "贵人改变关键路径",
+    "text": "旧事只取一证：是否有一位前辈或贵人在关键时刻改变你的路径？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-042",
+    "primaryFactId": "fact:social_partnership_break",
+    "factIndex": 41,
+    "domain": "legal_social",
+    "proposition": "合作关系决裂",
+    "text": "旧事只取一证：是否有过一次重要合作关系的彻底决裂？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-043",
+    "primaryFactId": "fact:turn_child_arrival",
+    "factIndex": 42,
+    "domain": "turning_point",
+    "proposition": "子女到来改变重心",
+    "text": "旧事只取一证：是否因子女到来或承担育儿责任而改变生活重心？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-044",
+    "primaryFactId": "fact:turn_close_death",
+    "factIndex": 43,
+    "domain": "turning_point",
+    "proposition": "至亲离世改变人生",
+    "text": "旧事只取一证：是否有至亲离世长期改变了你的选择？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-045",
+    "primaryFactId": "fact:turn_inheritance",
+    "factIndex": 44,
+    "domain": "turning_point",
+    "proposition": "继承或家产处置",
+    "text": "旧事只取一证：是否经历过继承、家产分配或重大遗产处置？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-046",
+    "primaryFactId": "fact:turn_spiritual",
+    "factIndex": 45,
+    "domain": "turning_point",
+    "proposition": "信念体系明显转变",
+    "text": "旧事只取一证：是否有过一次宗教、哲学或人生信念的明显转变？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-047",
+    "primaryFactId": "fact:turn_restart",
+    "factIndex": 46,
+    "domain": "turning_point",
+    "proposition": "重大崩塌后重启",
+    "text": "旧事只取一证：是否在一次重大崩塌后重新建立生活？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-048",
+    "primaryFactId": "fact:turn_identity_shift",
+    "factIndex": 47,
+    "domain": "turning_point",
+    "proposition": "社会身份根本改变",
+    "text": "旧事只取一证：是否经历过职业、家庭或社会身份的根本改变？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-049",
+    "primaryFactId": "fact:career_early_work_before_18",
+    "factIndex": 48,
+    "domain": "timing",
+    "proposition": "十八岁前持续工作",
+    "text": "旧事只取一证：十八岁以前是否已持续工作或挣钱？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-050",
+    "primaryFactId": "fact:move_left_hometown_before_22",
+    "factIndex": 49,
+    "domain": "timing",
+    "proposition": "二十二岁前长期离乡",
+    "text": "旧事只取一证：二十二岁以前是否已长期离开成长地？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-051",
+    "primaryFactId": "fact:health_hospital_before_18",
+    "factIndex": 50,
+    "domain": "timing",
+    "proposition": "十八岁前住院重治疗",
+    "text": "旧事只取一证：十八岁以前是否住院、手术或接受较重治疗？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-052",
+    "primaryFactId": "fact:rel_formative_love_before_20",
+    "factIndex": 51,
+    "domain": "timing",
+    "proposition": "二十岁前深刻恋情",
+    "text": "旧事只取一证：二十岁以前是否已有长期影响你的感情？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-053",
+    "primaryFactId": "fact:rel_marriage_before_28",
+    "factIndex": 52,
+    "domain": "timing",
+    "proposition": "二十八岁前进入婚姻",
+    "text": "旧事只取一证：二十八岁以前是否已经进入婚姻？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-054",
+    "primaryFactId": "fact:turn_child_arrival_before_30",
+    "factIndex": 53,
+    "domain": "timing",
+    "proposition": "三十岁前承担育儿",
+    "text": "旧事只取一证：三十岁以前是否已有子女或主要照顾孩子？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-055",
+    "primaryFactId": "fact:career_switch_before_30",
+    "factIndex": 54,
+    "domain": "timing",
+    "proposition": "三十岁前职业转轨",
+    "text": "旧事只取一证：三十岁以前是否已经真正转过职业主线？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-056",
+    "primaryFactId": "fact:career_leadership_before_35",
+    "factIndex": 55,
+    "domain": "timing",
+    "proposition": "三十五岁前带团队",
+    "text": "旧事只取一证：三十五岁以前是否已正式带团队或负责关键结果？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-057",
+    "primaryFactId": "fact:wealth_debt_before_30",
+    "factIndex": 56,
+    "domain": "timing",
+    "proposition": "三十岁前长期负债",
+    "text": "旧事只取一证：三十岁以前是否已有持续一年以上的明显债务？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-058",
+    "primaryFactId": "fact:turn_close_death_before_30",
+    "factIndex": 57,
+    "domain": "timing",
+    "proposition": "三十岁前经历至亲离世",
+    "text": "旧事只取一证：三十岁以前是否经历至亲离世并长期受其影响？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-059",
+    "primaryFactId": "fact:turn_restart_before_35",
+    "factIndex": 58,
+    "domain": "timing",
+    "proposition": "三十五岁前重大重启",
+    "text": "旧事只取一证：三十五岁以前是否已在重大崩塌后重建生活？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  },
+  {
+    "id": "TB4-060",
+    "primaryFactId": "fact:move_repeated_before_30",
+    "factIndex": 59,
+    "domain": "timing",
+    "proposition": "三十岁前多次迁居",
+    "text": "旧事只取一证：三十岁以前是否已经多次迁居或转换城市？相应答“应”，不相应答“不应”，确实记不清答“未明”。",
+    "answerOptions": [
+      "应",
+      "不应",
+      "未明"
+    ]
+  }
+]

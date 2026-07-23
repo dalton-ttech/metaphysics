@@ -1,0 +1,11 @@
+{
+  "name": "tieban-sealed-synthetic-v2",
+  "version": "2.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/v2.test.mjs",
+    "run": "node runner/run-experiment.mjs",
+    "replay:verify": "node ../sealed-synthetic-v1/reports/verify-replay.mjs"
+  }
+}

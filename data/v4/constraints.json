@@ -1,0 +1,594 @@
+{
+  "schemaVersion": "4.0.0",
+  "corpusVersion": "2026.07.22-v4.2.1",
+  "constraints": [
+    {
+      "id": "mx.siblings_count",
+      "title": "实际手足总数",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.siblings_count.0",
+        "fact.v4.axis.siblings_count.1",
+        "fact.v4.axis.siblings_count.2",
+        "fact.v4.axis.siblings_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.birth_order",
+      "title": "手足排行",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.birth_order.only",
+        "fact.v4.axis.birth_order.eldest",
+        "fact.v4.axis.birth_order.middle",
+        "fact.v4.axis.birth_order.youngest"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.parents_union_18",
+      "title": "十八岁前双亲关系",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.parents_union_18.together",
+        "fact.v4.axis.parents_union_18.conflict",
+        "fact.v4.axis.parents_union_18.separated",
+        "fact.v4.axis.parents_union_18.absent"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.primary_caregiver",
+      "title": "主要抚养者",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.primary_caregiver.both",
+        "fact.v4.axis.primary_caregiver.mother",
+        "fact.v4.axis.primary_caregiver.father",
+        "fact.v4.axis.primary_caregiver.relatives"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.father_state_30",
+      "title": "三十岁前父缘状态",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.father_state_30.present",
+        "fact.v4.axis.father_state_30.distant",
+        "fact.v4.axis.father_state_30.deceased",
+        "fact.v4.axis.father_state_30.lost_contact"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.mother_state_30",
+      "title": "三十岁前母缘状态",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.mother_state_30.present",
+        "fact.v4.axis.mother_state_30.distant",
+        "fact.v4.axis.mother_state_30.deceased",
+        "fact.v4.axis.mother_state_30.lost_contact"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.childhood_finance",
+      "title": "成长阶段家境",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "wealth",
+      "factIds": [
+        "fact.v4.axis.childhood_finance.affluent",
+        "fact.v4.axis.childhood_finance.stable",
+        "fact.v4.axis.childhood_finance.decline",
+        "fact.v4.axis.childhood_finance.strained"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.family_moves_18",
+      "title": "十八岁前迁居次数",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "education_mobility",
+      "factIds": [
+        "fact.v4.axis.family_moves_18.0",
+        "fact.v4.axis.family_moves_18.1",
+        "fact.v4.axis.family_moves_18.2",
+        "fact.v4.axis.family_moves_18.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.sibling_relation_context",
+      "title": "手足共同生活与往来",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.sibling_relation_context.co_resident",
+        "fact.v4.axis.sibling_relation_context.separate_contact",
+        "fact.v4.axis.sibling_relation_context.estranged",
+        "fact.v4.axis.sibling_relation_context.unavailable"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.sibling_care",
+      "title": "手足生活照料",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.sibling_care.no",
+        "fact.v4.axis.sibling_care.yes"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；2项概率和恒为1。"
+    },
+    {
+      "id": "mx.sibling_financial_support",
+      "title": "手足经济供养",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.sibling_financial_support.no",
+        "fact.v4.axis.sibling_financial_support.yes"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；2项概率和恒为1。"
+    },
+    {
+      "id": "mx.sibling_guardianship",
+      "title": "手足代亲监护",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.sibling_guardianship.no",
+        "fact.v4.axis.sibling_guardianship.yes"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；2项概率和恒为1。"
+    },
+    {
+      "id": "mx.parent_work_pattern",
+      "title": "父母职业形态",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "career",
+      "factIds": [
+        "fact.v4.axis.parent_work_pattern.stable",
+        "fact.v4.axis.parent_work_pattern.changing",
+        "fact.v4.axis.parent_work_pattern.self_employed",
+        "fact.v4.axis.parent_work_pattern.interrupted"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.caregiving_duration",
+      "title": "三十岁前家庭照护时长",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "family",
+      "factIds": [
+        "fact.v4.axis.caregiving_duration.none",
+        "fact.v4.axis.caregiving_duration.short",
+        "fact.v4.axis.caregiving_duration.medium",
+        "fact.v4.axis.caregiving_duration.long"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.first_close_loss",
+      "title": "首次重大亲缘离世",
+      "type": "exactly_one",
+      "category": "六亲考刻",
+      "domain": "turning_point",
+      "factIds": [
+        "fact.v4.axis.first_close_loss.none",
+        "fact.v4.axis.first_close_loss.elder",
+        "fact.v4.axis.first_close_loss.parent",
+        "fact.v4.axis.first_close_loss.peer"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.education_level",
+      "title": "最高完成学历",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "education_mobility",
+      "factIds": [
+        "fact.v4.axis.education_level.middle",
+        "fact.v4.axis.education_level.high",
+        "fact.v4.axis.education_level.college",
+        "fact.v4.axis.education_level.bachelor_plus"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.first_leave_hometown",
+      "title": "首次长期离乡年龄",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "education_mobility",
+      "factIds": [
+        "fact.v4.axis.first_leave_hometown.never",
+        "fact.v4.axis.first_leave_hometown.by18",
+        "fact.v4.axis.first_leave_hometown.19_24",
+        "fact.v4.axis.first_leave_hometown.25p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.adult_moves_count",
+      "title": "成年后跨城迁居次数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "education_mobility",
+      "factIds": [
+        "fact.v4.axis.adult_moves_count.0",
+        "fact.v4.axis.adult_moves_count.1",
+        "fact.v4.axis.adult_moves_count.2",
+        "fact.v4.axis.adult_moves_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.overseas_duration",
+      "title": "三十五岁前海外居留",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "education_mobility",
+      "factIds": [
+        "fact.v4.axis.overseas_duration.none",
+        "fact.v4.axis.overseas_duration.short",
+        "fact.v4.axis.overseas_duration.medium",
+        "fact.v4.axis.overseas_duration.long"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.career_entry_age",
+      "title": "首次持续工作年龄",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "career",
+      "factIds": [
+        "fact.v4.axis.career_entry_age.by18",
+        "fact.v4.axis.career_entry_age.19_22",
+        "fact.v4.axis.career_entry_age.23_26",
+        "fact.v4.axis.career_entry_age.27p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.career_switch_count",
+      "title": "四十岁前职业转轨次数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "career",
+      "factIds": [
+        "fact.v4.axis.career_switch_count.0",
+        "fact.v4.axis.career_switch_count.1",
+        "fact.v4.axis.career_switch_count.2",
+        "fact.v4.axis.career_switch_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.leadership_level",
+      "title": "最高管理责任",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "career",
+      "factIds": [
+        "fact.v4.axis.leadership_level.none",
+        "fact.v4.axis.leadership_level.small",
+        "fact.v4.axis.leadership_level.department",
+        "fact.v4.axis.leadership_level.executive"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.entrepreneurship_count",
+      "title": "四十岁前创业次数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "career",
+      "factIds": [
+        "fact.v4.axis.entrepreneurship_count.0",
+        "fact.v4.axis.entrepreneurship_count.1",
+        "fact.v4.axis.entrepreneurship_count.2",
+        "fact.v4.axis.entrepreneurship_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.wealth_shock",
+      "title": "四十岁前最大财务冲击",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "wealth",
+      "factIds": [
+        "fact.v4.axis.wealth_shock.none",
+        "fact.v4.axis.wealth_shock.debt",
+        "fact.v4.axis.wealth_shock.investment",
+        "fact.v4.axis.wealth_shock.business"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.property_count",
+      "title": "四十五岁前重要置业次数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "wealth",
+      "factIds": [
+        "fact.v4.axis.property_count.0",
+        "fact.v4.axis.property_count.1",
+        "fact.v4.axis.property_count.2",
+        "fact.v4.axis.property_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.marriage_count",
+      "title": "正式婚姻次数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "relationship",
+      "factIds": [
+        "fact.v4.axis.marriage_count.0",
+        "fact.v4.axis.marriage_count.1",
+        "fact.v4.axis.marriage_count.2",
+        "fact.v4.axis.marriage_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.children_count",
+      "title": "承担养育责任的子女数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "relationship",
+      "factIds": [
+        "fact.v4.axis.children_count.0",
+        "fact.v4.axis.children_count.1",
+        "fact.v4.axis.children_count.2",
+        "fact.v4.axis.children_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.major_relationship_count",
+      "title": "四十岁前重要亲密关系数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "relationship",
+      "factIds": [
+        "fact.v4.axis.major_relationship_count.0",
+        "fact.v4.axis.major_relationship_count.1",
+        "fact.v4.axis.major_relationship_count.2",
+        "fact.v4.axis.major_relationship_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.surgery_count",
+      "title": "四十岁前重大手术次数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "health",
+      "factIds": [
+        "fact.v4.axis.surgery_count.0",
+        "fact.v4.axis.surgery_count.1",
+        "fact.v4.axis.surgery_count.2",
+        "fact.v4.axis.surgery_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.accident_count",
+      "title": "四十岁前严重意外次数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "health",
+      "factIds": [
+        "fact.v4.axis.accident_count.0",
+        "fact.v4.axis.accident_count.1",
+        "fact.v4.axis.accident_count.2",
+        "fact.v4.axis.accident_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.legal_dispute_count",
+      "title": "四十五岁前正式法律纠纷数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "law_social",
+      "factIds": [
+        "fact.v4.axis.legal_dispute_count.0",
+        "fact.v4.axis.legal_dispute_count.1",
+        "fact.v4.axis.legal_dispute_count.2",
+        "fact.v4.axis.legal_dispute_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.job_interruption_count",
+      "title": "四十岁前非自愿职业中断数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "career",
+      "factIds": [
+        "fact.v4.axis.job_interruption_count.0",
+        "fact.v4.axis.job_interruption_count.1",
+        "fact.v4.axis.job_interruption_count.2",
+        "fact.v4.axis.job_interruption_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    },
+    {
+      "id": "mx.restart_count",
+      "title": "四十五岁前重大重启次数",
+      "type": "exactly_one",
+      "category": "定分",
+      "domain": "turning_point",
+      "factIds": [
+        "fact.v4.axis.restart_count.0",
+        "fact.v4.axis.restart_count.1",
+        "fact.v4.axis.restart_count.2",
+        "fact.v4.axis.restart_count.3p"
+      ],
+      "probabilityRule": {
+        "sum": 1,
+        "tolerance": 1e-9
+      },
+      "candidateAssignment": "每个候选命籍在回答前即确定一个主选项；4项概率和恒为1。"
+    }
+  ]
+}

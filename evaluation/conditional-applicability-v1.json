@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-22T00:00:00+08:00",
+  "seed": "condition-v1",
+  "configHash": "1bae2e1b8ae3ccc6d514782f0d970447beadc6636d577febbb32cbbda3e26df6",
+  "codebookHash": "6f20637ccb4b621c4563607708579aa2bd922ce8fb8d77585fbf1e40866f31a7",
+  "sourceHash": "ee7524eecc69f46dd55e1e0e2d97a0fa60d8e5cf7da07ba60e04bb7e0be1984f",
+  "cohorts": {
+    "no_sibling": 2000,
+    "co_resident": 2000,
+    "half_sibling_separate": 1500,
+    "substitute_parent": 1500,
+    "early_loss": 1000,
+    "estranged_or_lost_contact": 1000,
+    "mixed_with_noise": 1000
+  },
+  "metrics": {
+    "totalSamples": 10000,
+    "clearSamples": 9500,
+    "noisySamples": 500,
+    "clearExactAccuracy": 1,
+    "noisyExactAccuracy": 1,
+    "noSiblingDependentQuestionCount": 0,
+    "noisyNoSiblingDependentQuestionCount": 0,
+    "inapplicableQuestionRate": 0,
+    "replayRate": 1
+  },
+  "cohortMetrics": {
+    "no_sibling": {
+      "samples": 2000,
+      "exactAccuracy": 1,
+      "averageEvidenceChecks": 3.5
+    },
+    "co_resident": {
+      "samples": 2000,
+      "exactAccuracy": 1,
+      "averageEvidenceChecks": 17.1185
+    },
+    "half_sibling_separate": {
+      "samples": 1500,
+      "exactAccuracy": 1,
+      "averageEvidenceChecks": 17.996666666666666
+    },
+    "substitute_parent": {
+      "samples": 1500,
+      "exactAccuracy": 1,
+      "averageEvidenceChecks": 17.142666666666667
+    },
+    "early_loss": {
+      "samples": 1000,
+      "exactAccuracy": 1,
+      "averageEvidenceChecks": 17.5
+    },
+    "estranged_or_lost_contact": {
+      "samples": 1000,
+      "exactAccuracy": 1,
+      "averageEvidenceChecks": 17.143
+    },
+    "mixed_with_noise": {
+      "samples": 1000,
+      "exactAccuracy": 1,
+      "averageEvidenceChecks": 15.526
+    }
+  },
+  "resultHash": "8b191462421bf24b5d8c4fc75e9e76de85661810d04016b89803722756112925",
+  "acceptance": {
+    "noInapplicableQuestions": true,
+    "noSiblingCascade": true,
+    "clearAccuracyAtLeast90": true,
+    "noisyAccuracyAtLeast85": true,
+    "deterministicReplay": true
+  }
+}

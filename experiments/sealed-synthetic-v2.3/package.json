@@ -1,0 +1,11 @@
+{
+  "name": "tieban-sealed-synthetic-v2-3",
+  "version": "2.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/v23.test.mjs",
+    "run": "node runner/run-experiment.mjs"
+  }
+}
+

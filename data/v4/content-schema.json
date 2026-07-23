@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "候选命籍码本内容 V4",
+  "schemaVersion": "4.0.0",
+  "invariants": [
+    "BirthSeed由日期、时辰、性别、出生地四字段共同组成。",
+    "120个候选命籍必须在读取用户回答前生成。",
+    "每个候选包含事实概率、核心事实、候选先验与预生成命书条目。",
+    "互斥组在每个候选中的事实概率和必须为1。",
+    "相同BirthSeed与内容版本必须逐字节可重放。"
+  ],
+  "birthSeedRequired": [
+    "birthDate",
+    "shichen",
+    "gender",
+    "birthplace"
+  ],
+  "clauseCategories": [
+    "六亲考刻",
+    "定分",
+    "命局",
+    "运限"
+  ],
+  "codebookRequired": [
+    "schemaVersion",
+    "corpusVersion",
+    "seedFingerprint",
+    "replayKey",
+    "generatedBeforeAnswers",
+    "candidates",
+    "clauseMappings"
+  ]
+}

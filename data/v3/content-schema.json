@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.metaphysics.example/schemas/tieban-content-v3.json",
+  "title": "铁板神数现代拟制内容层 V3",
+  "schemaVersion": "3.0.0",
+  "contentPolicy": {
+    "calibrationInvariant": "每条考刻条必须且只能绑定一个 primaryFactId；人物、事件、时间是同一命题的限定，不得混入无关事实。",
+    "provenanceInvariant": "所有生成条文必须标注 modern_fabricated，不得伪称古籍原文。",
+    "numberingInvariant": "id、displayNumber 及 volumeId+clauseNumber 在各语料文件内唯一，displayNumber 在全部条文中全局唯一。"
+  },
+  "definitions": {
+    "factRequired": [
+      "id",
+      "legacyEventId",
+      "domain",
+      "subject",
+      "predicate",
+      "timeWindow",
+      "answerCriterion",
+      "sensitivity",
+      "applicability",
+      "source",
+      "status"
+    ],
+    "calibrationRequired": [
+      "id",
+      "volumeId",
+      "clauseNumber",
+      "displayNumber",
+      "clauseText",
+      "interpretation",
+      "primaryFactId",
+      "legacyEventId",
+      "domain",
+      "phase",
+      "evidenceAxis",
+      "ambiguity",
+      "applicability",
+      "answerMode",
+      "source",
+      "status"
+    ],
+    "fateRequired": [
+      "id",
+      "volumeId",
+      "clauseNumber",
+      "displayNumber",
+      "clauseText",
+      "interpretation",
+      "category",
+      "domain",
+      "primaryFactId",
+      "conditionFactIds",
+      "timeScope",
+      "ambiguity",
+      "applicability",
+      "source",
+      "status"
+    ]
+  },
+  "enums": {
+    "domains": [
+      "family",
+      "education_mobility",
+      "career",
+      "wealth",
+      "relationship",
+      "health",
+      "law_social",
+      "turning_point"
+    ],
+    "sensitivity": [
+      "ordinary",
+      "private",
+      "intense"
+    ],
+    "calibrationPhase": [
+      "initial",
+      "rectify",
+      "confirm"
+    ],
+    "fateCategory": [
+      "命局",
+      "前运",
+      "后运"
+    ],
+    "sourceKind": [
+      "modern_fabricated"
+    ],
+    "status": [
+      "active",
+      "draft",
+      "retired"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "intent": "concept",
+  "freshness_mode": "evergreen_ok",
+  "cluster_mode": "none",
+  "subqueries": [
+    {
+      "label": "turning_points",
+      "search_query": "biggest life turning point personal story",
+      "ranking_query": "Which concrete experiences do people describe as the moments that changed their life direction?",
+      "sources": ["reddit", "hackernews"],
+      "weight": 1.0
+    },
+    {
+      "label": "loss_and_recovery",
+      "search_query": "divorce bankruptcy illness job loss recovery personal story",
+      "ranking_query": "How do people describe major loss, collapse, and recovery in their own words?",
+      "sources": ["reddit"],
+      "weight": 0.9
+    },
+    {
+      "label": "family_and_duty",
+      "search_query": "caregiving bereavement family estrangement inheritance dispute personal experience",
+      "ranking_query": "Which family duties, deaths, estrangements, and inheritance conflicts become lasting life events?",
+      "sources": ["reddit"],
+      "weight": 0.8
+    },
+    {
+      "label": "mobility_and_social_risk",
+      "search_query": "moving abroad career change legal trouble reputation crisis life story",
+      "ranking_query": "How do people describe relocation, career changes, legal trouble, and reputation crises as life turning points?",
+      "sources": ["reddit", "hackernews"],
+      "weight": 0.8
+    }
+  ]
+}
