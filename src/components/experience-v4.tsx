@@ -25,7 +25,7 @@ import type {
 
 type View = "landing" | "intake" | "calibration" | "locked" | "undetermined" | "book";
 
-const STORAGE_KEY = "tieban-life-decoder-v4-causal-v6.3";
+const STORAGE_KEY = "tieban-life-decoder-v4-causal-v6.5";
 
 interface V4Corpus {
   atomicFacts: AtomicFact[];
@@ -68,6 +68,11 @@ const phaseLabels = {
   locked: "刻成",
   undetermined: "待复"
 } as const;
+
+function VerseLines({ text }: { text: string }) {
+  const lines = text.split(/(?<=[，；！？])/u).map((line) => line.trim()).filter(Boolean);
+  return <>{lines.map((line, index) => <span className="tb-verse-line" key={`${line}-${index}`}>{line}</span>)}</>;
+}
 
 function KeCandidateRail({ session }: { session: TiebanV4Session }) {
   const ranking = rankCandidatesV4(session);
@@ -210,29 +215,28 @@ function BookViewV4({ book, onReset }: { book: TiebanBookV4; onReset: () => void
         <h1>{book.title}</h1>
         <div><b>{book.exactTime}</b><span>{book.keLabel}</span></div>
       </section>
-      <nav className="tb-book__index" aria-label="命书卷目"><a href="#identity">命印</a><a href="#evidence">铁证</a><a href="#past">命路</a><a href="#future">后程</a></nav>
+      <nav className="tb-book__index" aria-label="命书卷目"><a href="#identity">命印</a><a href="#past">命路</a><a href="#future">后程</a></nav>
       <section className="tb-book__identity" id="identity">
         <div className="tb-identity-seal" aria-label={book.identity.title}>{[...book.identity.title].map((character, index) => <i key={`${character}-${index}`}>{character}</i>)}</div>
-        <div><span>命印</span><h2>{book.identity.dictum}</h2><p>{book.identity.reading}</p></div>
-      </section>
-      <section className="tb-book__evidence" id="evidence">
-        <header><span>卷一</span><h2>三处铁证</h2></header>
-        <div>{book.ironEvidence.map((node, index) => <article key={node.id}><b>{String(index + 1).padStart(2, "0")}</b><small>{node.ageRange} · {node.subject}</small><h3>{node.title.replace(/^.*? · /u, "")}</h3><p>{node.aftereffect}</p></article>)}</div>
+        <div><span>命印</span><h2><VerseLines text={book.identity.dictum} /></h2><p>{book.identity.reading}</p></div>
       </section>
       <section className="tb-book__section" id="past">
-        <header><span>卷二</span><h2>命路纪</h2></header>
+        <header><span>卷一</span><h2>命路纪</h2></header>
         <div className="tb-past-nodes">
           {book.pastNodes.length ? book.pastNodes.map((node, index) => (
             <article key={node.id}>
               <span>{String(index + 1).padStart(2, "0")}</span>
-              <div><small>{node.ageRange} · {node.subject} · 条文 {node.clauseNumber}</small><h3>{node.title}</h3><blockquote className="tb-past-nodes__summary">{node.summary}</blockquote><p>{node.aftereffect}</p>{book.storyEdges[index] ? <em>{book.storyEdges[index].text}</em> : null}</div>
+              <div>
+                <small>{node.ageRange} · {node.subject} · 条文 {node.clauseNumber}</small>
+                <blockquote className="tb-past-nodes__summary"><VerseLines text={node.summary} /></blockquote>
+                <div className="tb-past-nodes__reading"><span>今解</span><p>{node.aftereffect}</p></div>
+              </div>
             </article>
           )) : <p className="tb-empty-book">此卷无文。</p>}
         </div>
       </section>
-      {book.unaskedInsight ? <section className="tb-book__unasked"><span>未问而见</span><blockquote>{book.unaskedInsight.summary}</blockquote><h2>{book.unaskedInsight.title.replace(/^.*? · /u, "")}</h2><p>{book.unaskedInsight.aftereffect}</p></section> : null}
       <section className="tb-book__section tb-book__section--future" id="future">
-        <header><span>卷三</span><h2>后程录</h2></header>
+        <header><span>卷二</span><h2>后程录</h2></header>
         <div>
           <div className="tb-future-origin"><span>今岁</span><b>{book.currentAge}</b><i aria-hidden="true" /></div>
           <div className="tb-future-nodes">
@@ -243,7 +247,7 @@ function BookViewV4({ book, onReset }: { book: TiebanBookV4; onReset: () => void
                   {group.nodes.map((node) => (
                     <article className={node.terminal ? "is-terminal" : ""} key={node.id}>
                       <div className="tb-future-node__mark"><b>{String(futureIndex.get(node.id)).padStart(2, "0")}</b><small>{node.horizon}</small></div>
-                      <div className="tb-future-node__copy"><blockquote>{node.verse}</blockquote><em>{node.sign}</em><p>{node.reading}</p></div>
+                      <div className="tb-future-node__copy"><blockquote><VerseLines text={node.verse} /></blockquote><em>{node.sign}</em><p>{node.reading}</p></div>
                       {node.terminal ? <i className="tb-future-terminal__seal" aria-label="寿限">寿<br />限</i> : null}
                     </article>
                   ))}

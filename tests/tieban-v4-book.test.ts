@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import { buildTiebanBookV4 } from "@/lib/tieban-v4-book";
+import {
+  buildTiebanBookV4,
+  TIEBAN_IDENTITY_FALLBACK_V4,
+  TIEBAN_IDENTITY_PATTERNS_V4
+} from "@/lib/tieban-v4-book";
 import { createTiebanSessionV4 } from "@/lib/tieban-v4-engine";
 import type { AtomicFact, TiebanClause, TiebanIntake, TiebanV4Session } from "@/lib/tieban-v4-types";
 
@@ -105,7 +109,6 @@ describe("Tieban V4 locked-profile book compiler", () => {
     const book = buildTiebanBookV4(locked(68), facts, calibration, fate);
     const vernacular = [
       book.identity.reading,
-      ...book.ironEvidence.map((node) => node.aftereffect),
       ...book.pastNodes.map((node) => node.aftereffect),
       ...book.storyEdges.map((edge) => edge.text),
       ...book.futureNodes.flatMap((node) => [node.sign, node.reading])
@@ -116,6 +119,14 @@ describe("Tieban V4 locked-profile book compiler", () => {
       const to = book.pastNodes.find((node) => node.id === edge.toNodeId)!;
       expect(edge.text).toContain(from.title.replace(/^.*? · /u, ""));
       expect(edge.text).toContain(to.title.replace(/^.*? · /u, ""));
+    }
+  });
+
+  it("keeps every identity dictum as one coherent seven-character couplet", () => {
+    const identities = [...TIEBAN_IDENTITY_PATTERNS_V4, TIEBAN_IDENTITY_FALLBACK_V4];
+    for (const identity of identities) {
+      expect(identity.dictum).toMatch(/^[^，。！？；]{7}，[^，。！？；]{7}。$/u);
+      expect(identity.dictum).not.toMatch(/后来|以后|之后|因此|所以|从而|导致|意味着|便处处/u);
     }
   });
 

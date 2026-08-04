@@ -6,6 +6,8 @@ import {
   buildLifetimeForecastV4,
   calculateTerminalAgeV4,
   TIEBAN_V4_FUTURE_TEMPLATE_COUNT,
+  TIEBAN_V4_FUTURE_VERSE_CATALOG,
+  TIEBAN_V4_TERMINAL_VERSES,
   type LifetimeForecastInputV4
 } from "@/lib/tieban-v4-future";
 
@@ -27,6 +29,11 @@ const classicEligibleKeys = new Set([
   "law.helper", "law.reputation", "turning.restart", "turning.crisis"
 ]);
 
+function hasAsymmetricCadence(verse: string) {
+  const [first = "", second = ""] = verse.slice(0, -1).split("，");
+  return [...first].length !== [...second].length;
+}
+
 function sample(index: number): LifetimeForecastInputV4 {
   const currentAge = 18 + index % 61;
   return {
@@ -43,6 +50,24 @@ function sample(index: number): LifetimeForecastInputV4 {
 }
 
 describe("V6.3 lifetime forecast simulation", () => {
+  it("mixes ordered couplets with asymmetric judgment cadences", () => {
+    const verses = [...TIEBAN_V4_FUTURE_VERSE_CATALOG.map((item) => item.verse), ...TIEBAN_V4_TERMINAL_VERSES];
+    const cadences = verses.map((verse) => {
+      expect(verse).toMatch(/^[^，。！？；]{4,12}，[^，。！？；]{4,12}。$/u);
+      const [first, second] = verse.slice(0, -1).split("，");
+      return `${[...first].length}+${[...second].length}`;
+    });
+    const asymmetricCount = cadences.filter((item) => {
+      const [first, second] = item.split("+").map(Number);
+      return first !== second;
+    }).length;
+    const largestPattern = Math.max(...[...new Set(cadences)].map((item) => cadences.filter((candidate) => candidate === item).length));
+
+    expect(asymmetricCount / verses.length).toBeGreaterThanOrEqual(0.35);
+    expect(new Set(cadences).size).toBeGreaterThanOrEqual(6);
+    expect(largestPattern / verses.length).toBeLessThanOrEqual(0.65);
+  });
+
   it("covers 1,000 synthetic lives continuously through a deterministic terminal age", () => {
     const sampleCount = 1_000;
     const sequenceFingerprints = new Set<string>();
@@ -53,6 +78,9 @@ describe("V6.3 lifetime forecast simulation", () => {
     let maximumGap = 0;
     let maximumSpan = 0;
     let longestDomainRun = 0;
+    let minimumAsymmetricShare = 1;
+    let asymmetricShareTotal = 0;
+    let minimumAsymmetricSample = { index: -1, eventKeys: [] as string[] };
     const bannedCopy = /新局|路径|结构倾向|长期结构|课题|能量|沉淀|赋能|重启|开启|归整|调序|定向|换轨|前一处|这一处|真实选择/u;
 
     expect(TIEBAN_V4_FUTURE_TEMPLATE_COUNT).toBeGreaterThanOrEqual(50);
@@ -81,6 +109,12 @@ describe("V6.3 lifetime forecast simulation", () => {
 
       const eventKeys = new Set(forecast.nodes.map((node) => node.eventKey));
       const verses = new Set(forecast.nodes.map((node) => node.verse));
+      const asymmetricShare = forecast.nodes.filter((node) => hasAsymmetricCadence(node.verse)).length / forecast.nodes.length;
+      if (asymmetricShare < minimumAsymmetricShare) {
+        minimumAsymmetricShare = asymmetricShare;
+        minimumAsymmetricSample = { index, eventKeys: forecast.nodes.map((node) => node.eventKey) };
+      }
+      asymmetricShareTotal += asymmetricShare;
       expect(eventKeys.size).toBe(forecast.nodes.length);
       expect(verses.size).toBe(forecast.nodes.length);
       expect(forecast.nodes.filter((node) => node.sourceType === "classic").length / forecast.nodes.length).toBeLessThanOrEqual(0.15);
@@ -130,7 +164,10 @@ describe("V6.3 lifetime forecast simulation", () => {
       classicShare: Number((classicTotal / nodeTotal).toFixed(4)),
       maximumGap,
       maximumSpan,
-      longestDomainRun
+      longestDomainRun,
+      minimumAsymmetricShare: Number(minimumAsymmetricShare.toFixed(3)),
+      averageAsymmetricShare: Number((asymmetricShareTotal / sampleCount).toFixed(3)),
+      minimumAsymmetricSample
     };
     console.info("V6_LIFETIME_SIMULATION", JSON.stringify(metrics));
     expect(metrics.distinctTerminalAges).toBeGreaterThanOrEqual(15);
@@ -140,5 +177,7 @@ describe("V6.3 lifetime forecast simulation", () => {
     expect(metrics.maximumGap).toBe(0);
     expect(metrics.maximumSpan).toBe(3);
     expect(metrics.longestDomainRun).toBeLessThanOrEqual(2);
+    expect(metrics.minimumAsymmetricShare).toBeGreaterThanOrEqual(0.2);
+    expect(metrics.averageAsymmetricShare).toBeGreaterThanOrEqual(0.35);
   }, 120_000);
 });

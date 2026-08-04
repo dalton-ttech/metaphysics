@@ -163,10 +163,8 @@ export interface TiebanBookV4 {
   terminalAge: number;
   opening: string;
   identity: TiebanIdentityV4;
-  ironEvidence: PastLifeNodeV4[];
   pastNodes: PastLifeNodeV4[];
   storyEdges: TiebanStoryEdgeV4[];
-  unaskedInsight: PastLifeNodeV4 | null;
   futureNodes: FutureFateNodeV4[];
   closing: string;
 }

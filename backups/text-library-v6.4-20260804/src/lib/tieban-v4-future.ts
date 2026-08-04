@@ -80,7 +80,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "family",
     minAge: 18,
     maxAge: 58,
-    verse: "檐雨未收，灯下新添一肩寒。",
+    verse: "一肩风雨一肩灯，家事临门自有承。",
     sign: "家里原由别人料理的事，开始交到你手中。",
     reading: "家庭分工会重新安排，你将承担一件持续多年的责任。"
   },
@@ -89,7 +89,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "family",
     minAge: 35,
     maxAge: 76,
-    verse: "庭树迟春未发，夜深药气过重帘。",
+    verse: "庭前老树添新绿，堂上春晖入晚晴。",
     sign: "长辈的起居、住所或就医，需要家中重新商量。",
     reading: "你会为一位长辈多费心力，家人之间也会重新分担照料之责。"
   },
@@ -98,7 +98,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "family",
     minAge: 24,
     maxAge: 72,
-    verse: "燕子衔泥归旧垒，灯火换新门。",
+    verse: "燕子衔泥寻旧垒，一庭灯火换新门。",
     sign: "家中先添置大件，随后有人提出搬迁或同住。",
     reading: "住所会有一次明显变化，搬家、置业或家庭成员同住至少应一项。"
   },
@@ -107,7 +107,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "family",
     minAge: 27,
     maxAge: 62,
-    verse: "阶前竹动，满院初闻燕语新。",
+    verse: "阶前新竹初抽笋，满院春风自此长。",
     sign: "亲属间频繁谈起婚育、添丁或孩子的去处。",
     reading: "家中会添一位重要的新成员，此后数年的生活重心随之改变。"
   },
@@ -116,7 +116,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "family",
     minAge: 42,
     maxAge: 86,
-    verse: "旧匣尘封重开处，字迹各分明。",
+    verse: "旧匣多年今再启，家中名分一朝明。",
     sign: "一份旧证件、房契或长久未谈的家事重新摆上桌面。",
     reading: "一件积压多年的家事会得到处理，财物归属与各自责任随之明确。"
   },
@@ -134,7 +134,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "family",
     minAge: 60,
     maxAge: 110,
-    verse: "暮灯犹有余温，帘外常闻问履声。",
+    verse: "灯火不随人事改，晚来常有问安声。",
     sign: "晚辈探望渐勤，家中开始固定陪伴与照料的日子。",
     reading: "晚年起居多由亲近之人照应，家门虽各有去处，重要时刻仍有人在侧。"
   },
@@ -152,7 +152,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "education_mobility",
     minAge: 20,
     maxAge: 66,
-    verse: "潮生催棹，云尽长亭又一程。",
+    verse: "江上潮来催去棹，云开驿路见青山。",
     sign: "异地邀请、出差或远行安排在短期内接连出现。",
     reading: "一次远行会带来新的关系或机会，原先犹豫的去处会逐渐明朗。"
   },
@@ -161,7 +161,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "education_mobility",
     minAge: 24,
     maxAge: 70,
-    verse: "旧渡灯收人去后，他乡月上。",
+    verse: "此岸灯收辞旧渡，他乡月上照新居。",
     sign: "通勤、住房或家人的去处同时发生变化。",
     reading: "生活地点会跨过一段不短的距离，新的城市或社区将住上数年。"
   },
@@ -188,7 +188,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "education_mobility",
     minAge: 62,
     maxAge: 100,
-    verse: "千帆看尽收归棹，一树为乡。",
+    verse: "看尽千帆收晚棹，门前一树便为乡。",
     sign: "远行次数渐少，住处开始按长久生活重新布置。",
     reading: "奔波会明显减少，你将选定一处更适合久住的地方，往后少有大迁。"
   },
@@ -206,7 +206,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "career",
     minAge: 24,
     maxAge: 62,
-    verse: "旧舟泊稳，别有东风过一湾。",
+    verse: "旧舟泊罢潮声远，另借东风过一湾。",
     sign: "原岗位的去留迟迟不定，另一处却连续递来消息。",
     reading: "你会离开原来的岗位或做法，转入更适合长期积累的工作。"
   },
@@ -215,7 +215,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "career",
     minAge: 27,
     maxAge: 64,
-    verse: "不借高枝，自向庭前种梧桐。",
+    verse: "不借高枝栖一羽，自开庭院种梧桐。",
     sign: "有人愿意付费请你独立完成一件过去附属于本职的事。",
     reading: "个人名义下的事业或副业会逐渐成形，并带来一项稳定收入。"
   },
@@ -224,7 +224,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "career",
     minAge: 28,
     maxAge: 66,
-    verse: "两棹同声，水路分明到远汀。",
+    verse: "两桨同催舟自疾，分清水路到长堤。",
     sign: "一位熟人带着资源而来，同时要求明确分工与收益。",
     reading: "你会进入一次重要合作；先定权责，合作才会持续并见到成果。"
   },
@@ -233,7 +233,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "career",
     minAge: 34,
     maxAge: 72,
-    verse: "匣剑多年，忽有霜声出远门。",
+    verse: "十年磨得匣中剑，一日霜锋众所知。",
     sign: "旧成果被重新提起，陌生人也因口碑前来相求。",
     reading: "过往积累会换来一次公开认可，你在熟悉领域中的名声随之提高。"
   },
@@ -251,7 +251,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "career",
     minAge: 58,
     maxAge: 88,
-    verse: "印绶轻收入旧箧，闲看庭树。",
+    verse: "印绶轻收归旧箧，闲看庭树过春秋。",
     sign: "日常工作开始交给后辈，固定事务逐项减少。",
     reading: "职业责任会正式减轻，你将退出一线，但仍会因经验受到倚重。"
   },
@@ -278,7 +278,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "wealth",
     minAge: 28,
     maxAge: 72,
-    verse: "量土安居，一砖一瓦认家门。",
+    verse: "寸土量来安岁月，一砖一瓦定家门。",
     sign: "看房、修缮、产权或长期租住的问题反复商量。",
     reading: "不动产会有一次重要决定，买卖、修缮或产权调整至少应一项。"
   },
@@ -287,7 +287,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "wealth",
     minAge: 24,
     maxAge: 72,
-    verse: "潮退见礁，收帆且待顺风来。",
+    verse: "潮退方知礁石在，收帆且待顺风来。",
     sign: "回款变慢，大额支出却比原定时间更早到来。",
     reading: "手头会有一段偏紧的时期；守住现金，不替人担保，数月后可缓。"
   },
@@ -305,7 +305,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "wealth",
     minAge: 42,
     maxAge: 86,
-    verse: "满仓未必皆堪守，三分度岁寒。",
+    verse: "满仓未必皆为谷，留取三分度岁寒。",
     sign: "你开始集中清点账户、保单、产权与长期费用。",
     reading: "资产会从分散转为稳守，风险较高的一项逐渐退出，长期保障随之增加。"
   },
@@ -314,7 +314,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "wealth",
     minAge: 62,
     maxAge: 100,
-    verse: "囊中有度，庭前风月不论金。",
+    verse: "囊中有度心常静，不向浮华问重轻。",
     sign: "大额消费明显减少，钱更多花在健康、家人和日常舒适上。",
     reading: "晚年财用以稳为主，收入未必再增，日常所需却能从容支应。"
   },
@@ -323,7 +323,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "relationship",
     minAge: 18,
     maxAge: 52,
-    verse: "花径初逢人未识，一程风雨。",
+    verse: "花径偶逢同路客，一程风雨共扶持。",
     sign: "同一人因工作、朋友或一次外出而反复出现。",
     reading: "一段重要关系会从频繁往来开始，后来进入共同生活或长期承诺。"
   },
@@ -332,7 +332,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "relationship",
     minAge: 22,
     maxAge: 68,
-    verse: "并舟逢急，灯下深言莫避心。",
+    verse: "并舟最怕中流急，话到深时莫避心。",
     sign: "双方围绕钱、住处或家人连续争执，旧问题无法再绕开。",
     reading: "一段关系会经历严峻考验；把实际安排谈清，才能决定继续还是分开。"
   },
@@ -359,7 +359,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "relationship",
     minAge: 24,
     maxAge: 74,
-    verse: "雁书不断，明月分明照两城。",
+    verse: "雁去衡阳书未断，月明两地照同心。",
     sign: "工作或家事使两人聚少离多，见面需要提前安排。",
     reading: "一段亲密关系会经历异地或长期分居，能否守住全在联系是否稳定。"
   },
@@ -377,7 +377,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "relationship",
     minAge: 60,
     maxAge: 100,
-    verse: "暮色满庭人未散，无言亦安。",
+    verse: "暮色满庭人未散，相看无语亦心安。",
     sign: "日常往来逐渐固定，只留下少数最亲近的人。",
     reading: "晚年交游虽少，仍有一两位知心人常相往来，孤单之时有人可说话。"
   },
@@ -386,7 +386,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "health",
     minAge: 20,
     maxAge: 62,
-    verse: "长弦久紧，且留余力待来朝。",
+    verse: "弓满久张弦易损，且收三分养余力。",
     sign: "睡眠变浅、醒后仍累，忙碌数日便难恢复。",
     reading: "身体会因长期劳累发出警讯，减少熬夜与连续透支后方能回稳。"
   },
@@ -395,7 +395,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "health",
     minAge: 18,
     maxAge: 72,
-    verse: "桥滑风急，行到危时缓一步。",
+    verse: "行舟莫趁风头急，石滑桥危缓一步。",
     sign: "出行、运动或搬动重物前，手脚先有酸痛不适。",
     reading: "这一阶段须防跌碰、扭伤或旧伤复发，伤处多在四肢与腰背。"
   },
@@ -422,7 +422,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "health",
     minAge: 45,
     maxAge: 92,
-    verse: "灯下字疏，镜里霜痕又几分。",
+    verse: "灯下字疏添镜看，齿间旧痛莫等闲。",
     sign: "阅读更依赖光线，牙齿、听力或视物至少一处反复不适。",
     reading: "眼、耳或牙齿需要一次较认真的检查与处理，及时处置便不妨日常。"
   },
@@ -431,7 +431,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "health",
     minAge: 48,
     maxAge: 94,
-    verse: "细雨经年，添衣按候便无惊。",
+    verse: "细雨连绵非骤急，添衣按候便无惊。",
     sign: "指标反复在临界处波动，饮食与用药开始需要长期记录。",
     reading: "慢性旧恙会成为长期相伴之事，按时复查、规律用药即可维持稳定。"
   },
@@ -449,7 +449,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "health",
     minAge: 65,
     maxAge: 110,
-    verse: "秋声渐缓，行路渐知惜寸阴。",
+    verse: "秋深木叶随风缓，行路从今惜寸阴。",
     sign: "步子变慢，白日休息增多，外出开始需要有人陪同。",
     reading: "体力会明显衰减，旧恙发作更频，起居与出行渐由家人照应。"
   },
@@ -467,7 +467,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "law_social",
     minAge: 22,
     maxAge: 78,
-    verse: "堂前息语，案上还须一纸凭。",
+    verse: "堂前莫竞三分气，案上须留一纸凭。",
     sign: "对方说法前后不同，聊天记录、票据或合同开始变得重要。",
     reading: "你会卷入一场纠纷，宜依证据处理；事情虽烦，最终能划清责任。"
   },
@@ -476,7 +476,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "law_social",
     minAge: 20,
     maxAge: 76,
-    verse: "寒江日暮，远浦忽来一叶舟。",
+    verse: "雪夜有人提灯至，半程相送过寒关。",
     sign: "一位平日来往不多的人，主动替你引见或作证。",
     reading: "困难之时会有一位关键人物出手相助，使原本僵住的事出现转机。"
   },
@@ -494,7 +494,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "law_social",
     minAge: 42,
     maxAge: 92,
-    verse: "旧契重开，朱痕落处旧尘清。",
+    verse: "旧契重开朱印正，前因后果一朝清。",
     sign: "遗留多年的证件、产权或账户需要补签与核对。",
     reading: "一批重要文件会集中整理，过去含混的归属因此得到正式确认。"
   },
@@ -503,7 +503,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "law_social",
     minAge: 48,
     maxAge: 94,
-    verse: "门前问事，半杯清茶量短长。",
+    verse: "门前邻里常相问，闲把公心量短长。",
     sign: "邻里、同业或社群中的公共事务频繁来找你商量。",
     reading: "你会在一个团体中成为可信赖的协调者，虽费精神，也能积下人望。"
   },
@@ -512,7 +512,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "turning_point",
     minAge: 18,
     maxAge: 68,
-    verse: "旧页风干，提笔从头另起章。",
+    verse: "旧页翻过风声定，提笔从头写此章。",
     sign: "原本稳定的安排连续两次变化，旧办法已难再维持。",
     reading: "生活会在工作、住处或关系上出现一次转折，此后数年走法与从前不同。"
   },
@@ -530,7 +530,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "turning_point",
     minAge: 26,
     maxAge: 72,
-    verse: "门内新添一席，肩上风来。",
+    verse: "门内忽添新座次，肩头从此有轻重。",
     sign: "家人与同事开始用新的身份称呼你，并把决定留给你。",
     reading: "你会取得一个新的家庭或事业身份，责任增加，能调动的资源也更多。"
   },
@@ -539,7 +539,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "turning_point",
     minAge: 38,
     maxAge: 82,
-    verse: "旧梦未随年岁远，春又归心。",
+    verse: "旧梦不曾随岁远，春风又到少年心。",
     sign: "年轻时放下的愿望连续被旧人和旧物提起。",
     reading: "一件搁置多年的心愿会重新开始，这次不求声势，只求真正做成。"
   },
@@ -548,7 +548,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "turning_point",
     minAge: 48,
     maxAge: 90,
-    verse: "繁枝删尽，庭前风月自分明。",
+    verse: "删去繁枝留一树，庭前风月自分明。",
     sign: "你主动结束一项耗时却少有所得的长期事务。",
     reading: "生活会做一次明显减法，事务与往来减少，时间重新回到自己手中。"
   },
@@ -557,7 +557,7 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     domain: "turning_point",
     minAge: 58,
     maxAge: 92,
-    verse: "朝衣轻换，闲日仍将旧艺温。",
+    verse: "朝衣换作寻常服，闲日仍将旧艺温。",
     sign: "固定工作渐少，你开始认真安排每天如何度过。",
     reading: "离开主要职业之后，你会以兴趣、照料家人或传授经验填满新的日常。"
   },
@@ -571,8 +571,6 @@ const FUTURE_TEMPLATES: FutureTemplateV4[] = [
     reading: "你会把一生最看重的经验与物件交给后辈，晚年的心事也因此安定。"
   }
 ];
-
-export const TIEBAN_V4_FUTURE_VERSE_CATALOG = FUTURE_TEMPLATES.map(({ key, verse }) => ({ key, verse }));
 
 const TEMPLATES_BY_DOMAIN = new Map<EventDomain, FutureTemplateV4[]>(
   DOMAINS.map((domain) => [domain, FUTURE_TEMPLATES.filter((template) => template.domain === domain)])
@@ -670,15 +668,14 @@ function chooseTemplate(
   return fallback[0] ?? FUTURE_TEMPLATES[index % FUTURE_TEMPLATES.length];
 }
 
-export const TIEBAN_V4_TERMINAL_VERSES = [
-  "平生灯尽，帘外松风送晚钟。",
-  "旧卷至此朱砂定，庭前风静月初沉。",
-  "来时一叶随春水，归去千山入暮云。",
-  "行到云归处，灯火犹温月正明。"
-] as const;
-
 function terminalVerse(input: LifetimeForecastInputV4) {
-  return TIEBAN_V4_TERMINAL_VERSES[stableHashV4(`terminal-verse:${input.profileSignature}`) % TIEBAN_V4_TERMINAL_VERSES.length];
+  const verses = [
+    "一灯照尽平生事，帘外松风送晚钟。",
+    "旧卷至此朱砂定，庭前风静月初沉。",
+    "来时一叶随春水，归去千山入暮云。",
+    "一生行至云归处，灯火犹温月正明。"
+  ];
+  return verses[stableHashV4(`terminal-verse:${input.profileSignature}`) % verses.length];
 }
 
 function terminalSeason(input: LifetimeForecastInputV4) {

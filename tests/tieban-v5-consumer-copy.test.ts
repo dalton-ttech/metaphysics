@@ -57,6 +57,18 @@ describe("V5 consumer copy and primary typeface", () => {
     expect(experience).toContain('from "@/components/experience-shell"');
   });
 
+  it("renders one complete 命路纪 without separate evidence or inferred-insight sections", () => {
+    const experience = readFileSync(join(root, "src/components/experience-v4.tsx"), "utf8");
+    const styles = readFileSync(join(root, "src/app/globals.css"), "utf8");
+    expect(experience).toContain("function VerseLines");
+    expect(experience).toContain("split(/(?<=[，；！？])/u)");
+    expect(experience).toContain('className="tb-past-nodes__reading"');
+    expect(experience).toContain("book.pastNodes.length ? book.pastNodes.map");
+    expect(experience).not.toMatch(/三处铁证|未问而见|ironEvidence|unaskedInsight/u);
+    expect(styles).not.toMatch(/tb-book__evidence|tb-book__unasked/u);
+    expect(styles).toMatch(/\.tb-verse-line\s*\{\s*display:\s*block;/u);
+  });
+
   it("writes every visible clause explanation as direct contemporary Chinese", () => {
     for (const clause of V4_CALIBRATION_CLAUSES) {
       expect(clause.interpretation).not.toMatch(/^所断为/u);
