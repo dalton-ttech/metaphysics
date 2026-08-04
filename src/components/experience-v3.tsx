@@ -176,8 +176,8 @@ export function Landing({ onBegin }: { onBegin: () => void }) {
         <div className="tb-landing__seal" aria-hidden="true"><span>考</span><span>时</span><span>定</span><span>刻</span></div>
         <div className="tb-landing__copy">
           <p className="tb-eyebrow">乾集 · 启卷</p>
-          <h1>前尘有数，<br /><em>刻分待明。</em></h1>
-          <p className="tb-landing__verse">一珠动处分辰刻，<br />十二卷中见旧痕。</p>
+          <h1 className="tb-display-lines"><span>前尘有数，</span><em>刻分待明。</em></h1>
+          <p className="tb-landing__verse tb-display-lines"><span>一珠动处分辰刻，</span><span>十二卷中见旧痕。</span></p>
           <button className="tb-primary-action" onClick={onBegin}><span>开局</span></button>
         </div>
         <div className="tb-landing__folio" aria-label="命籍卷次">
@@ -190,16 +190,19 @@ export function Landing({ onBegin }: { onBegin: () => void }) {
   );
 }
 
-export function IntakeView({ value, onChange, onStart, onBack }: {
+export function IntakeView({ value, onChange, onStart, onBack, starting = false, startError = "" }: {
   value: TiebanIntake;
   onChange: (next: TiebanIntake) => void;
   onStart: () => void;
   onBack: () => void;
+  starting?: boolean;
+  startError?: string;
 }) {
   const [error, setError] = useState("");
   const birth = dateParts(value.birthDate);
   const birthDays = Array.from({ length: daysInMonth(birth.year, birth.month) }, (_, index) => index + 1);
   const start = () => {
+    if (starting) return;
     if (!validBirthDate(value.birthDate)) {
       setError("生辰未明，请先落下出生年月日。");
       return;
@@ -215,7 +218,7 @@ export function IntakeView({ value, onChange, onStart, onBack }: {
         <div className="tb-section-mark"><b>壹</b><span>四柱起例</span></div>
         <div className="tb-intake__intro">
           <p className="tb-eyebrow">乾集 · 起例</p>
-          <h1>请定年月，<br />再择大概时辰。</h1>
+          <h1 className="tb-display-lines"><span>请定年月，</span><span>再择大概时辰。</span></h1>
         </div>
         <div className="tb-intake__form">
           <label className="tb-line-field"><span>称呼</span><input value={value.name} onChange={(event) => onChange({ ...value, name: event.target.value })} placeholder="可不留名" /></label>
@@ -231,8 +234,8 @@ export function IntakeView({ value, onChange, onStart, onBack }: {
           <div className="tb-gender-field"><span>命主</span><div>{([['male', '乾'], ['female', '坤'], ['unspecified', '不定']] as Array<[Gender, string]>).map(([gender, label]) => <button key={gender} className={value.gender === gender ? "is-selected" : ""} onClick={() => onChange({ ...value, gender })}>{label}</button>)}</div></div>
         </div>
         <div className="tb-shichen-select"><span>约在何时</span><span className="tb-select-rule"><PaperSelect ariaLabel="约在何时" value={value.birthShichen} options={SHICHEN.map((label, index) => ({ value: index, label: `${label}时 · ${SHICHEN_RANGES[index]}` }))} onChange={(birthShichen) => onChange({ ...value, birthShichen })} placement="up" /><i aria-hidden="true">择</i></span></div>
-        {error ? <p className="tb-form-error" role="alert">{error}</p> : null}
-        <button className="tb-primary-action" onClick={start}><span>起数</span></button>
+        {error || startError ? <p className="tb-form-error" role="alert">{error || startError}</p> : null}
+        <button className="tb-primary-action" onClick={start} disabled={starting} aria-busy={starting}><span>{starting ? "起数中" : "起数"}</span></button>
       </section>
       <footer className="tb-footer"><span>一命一卷</span><span>{shichenLabel(value.birthShichen)}</span></footer>
     </main>

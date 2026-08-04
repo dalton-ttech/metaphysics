@@ -2,9 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-import { AnswerKey, Brand, IntakeView, Landing } from "@/components/experience-v3";
+import { AnswerKey, Brand, IntakeView, Landing } from "@/components/experience-shell";
 import { buildTiebanBookV4 } from "@/lib/tieban-v4-book";
-import { V4_ATOMIC_FACTS, V4_CALIBRATION_CLAUSES, V4_CONSTRAINTS, V4_FATE_CLAUSES } from "@/lib/tieban-v4-content";
 import {
   answerTiebanClauseV4,
   createTiebanSessionV4,
@@ -14,11 +13,45 @@ import {
 } from "@/lib/tieban-v4-engine";
 import { buildRitualTraceV4, ritualNumberCellsV4, ritualStatusCopyV4 } from "@/lib/tieban-v4-ritual";
 import { articleLabel, keLabel, shichenLabel, volumeLabel } from "@/lib/tieban-v3-ritual";
-import type { TiebanAnswer, TiebanBookV4, TiebanIntake, TiebanV4Session } from "@/lib/tieban-v4-types";
+import type {
+  AtomicFact,
+  TiebanAnswer,
+  TiebanBookV4,
+  TiebanClause,
+  TiebanIntake,
+  TiebanMutualExclusionConstraint,
+  TiebanV4Session
+} from "@/lib/tieban-v4-types";
 
 type View = "landing" | "intake" | "calibration" | "locked" | "undetermined" | "book";
 
 const STORAGE_KEY = "tieban-life-decoder-v4-causal-v6.3";
+
+interface V4Corpus {
+  atomicFacts: AtomicFact[];
+  calibrationClauses: TiebanClause[];
+  constraints: TiebanMutualExclusionConstraint[];
+  fateClauses: TiebanClause[];
+}
+
+let corpusPromise: Promise<V4Corpus> | null = null;
+
+function loadV4Corpus() {
+  if (!corpusPromise) {
+    corpusPromise = import("@/lib/tieban-v4-content")
+      .then((content) => ({
+        atomicFacts: content.V4_ATOMIC_FACTS,
+        calibrationClauses: content.V4_CALIBRATION_CLAUSES,
+        constraints: content.V4_CONSTRAINTS,
+        fateClauses: content.V4_FATE_CLAUSES
+      }))
+      .catch((error: unknown) => {
+        corpusPromise = null;
+        throw error;
+      });
+  }
+  return corpusPromise;
+}
 const emptyIntake: TiebanIntake = {
   name: "",
   birthDate: "1990-06-18",
@@ -70,8 +103,7 @@ function EvidenceSeals({ session }: { session: TiebanV4Session }) {
   return <div className="tb-evidence-seals" aria-label="旧事证据印">{stages.map((stage) => <span key={stage.label} className={stage.active ? "is-active" : ""}>{stage.label}</span>)}</div>;
 }
 
-function NumberBoardV4({ session, clauseId }: { session: TiebanV4Session; clauseId: string }) {
-  const clause = V4_CALIBRATION_CLAUSES.find((item) => item.id === clauseId) ?? V4_CALIBRATION_CLAUSES[0];
+function NumberBoardV4({ session, clause }: { session: TiebanV4Session; clause: TiebanClause }) {
   const cells = ritualNumberCellsV4(session, clause);
   const trace = buildRitualTraceV4(session, clause);
   return (
@@ -85,14 +117,15 @@ function NumberBoardV4({ session, clauseId }: { session: TiebanV4Session; clause
   );
 }
 
-function CalibrationViewV4({ session, busy, onAnswer, onUndo, onReset }: {
+function CalibrationViewV4({ session, clauses, busy, onAnswer, onUndo, onReset }: {
   session: TiebanV4Session;
+  clauses: TiebanClause[];
   busy: boolean;
   onAnswer: (answer: TiebanAnswer) => void;
   onUndo: () => void;
   onReset: () => void;
 }) {
-  const clause = V4_CALIBRATION_CLAUSES.find((item) => item.id === session.currentClauseId);
+  const clause = clauses.find((item) => item.id === session.currentClauseId);
   if (!clause) return null;
   const trace = buildRitualTraceV4(session, clause);
   return (
@@ -101,7 +134,7 @@ function CalibrationViewV4({ session, busy, onAnswer, onUndo, onReset }: {
       <section className="tb-calibration__body">
         <div className="tb-calibration__status"><span>{ritualStatusCopyV4(session)}</span><i aria-hidden="true" /></div>
         <KeCandidateRail session={session} />
-        <NumberBoardV4 session={session} clauseId={clause.id} />
+        <NumberBoardV4 session={session} clause={clause} />
         <article className="tb-clause-leaf" key={clause.id}>
           <header><span>{volumeLabel(trace.volume)}</span><b>{trace.clauseNumber}</b><span>{articleLabel(trace.article)}</span></header>
           <div className="tb-clause-leaf__paper">
@@ -225,10 +258,17 @@ function BookViewV4({ book, onReset }: { book: TiebanBookV4; onReset: () => void
   );
 }
 
-function replaySession(session: TiebanV4Session, answerCount: number) {
-  let replay = createTiebanSessionV4(session.intake, V4_CALIBRATION_CLAUSES, V4_ATOMIC_FACTS, V4_FATE_CLAUSES, session.createdAt, V4_CONSTRAINTS);
+function replaySession(session: TiebanV4Session, answerCount: number, corpus: V4Corpus) {
+  let replay = createTiebanSessionV4(
+    session.intake,
+    corpus.calibrationClauses,
+    corpus.atomicFacts,
+    corpus.fateClauses,
+    session.createdAt,
+    corpus.constraints
+  );
   for (const record of session.answers.slice(0, answerCount)) {
-    replay = answerTiebanClauseV4(replay, record.answer, V4_CALIBRATION_CLAUSES, V4_ATOMIC_FACTS, record.answeredAt);
+    replay = answerTiebanClauseV4(replay, record.answer, corpus.calibrationClauses, corpus.atomicFacts, record.answeredAt);
   }
   return replay;
 }
@@ -238,8 +278,14 @@ export function ExperienceV4() {
   const [intake, setIntake] = useState<TiebanIntake>(emptyIntake);
   const [session, setSession] = useState<TiebanV4Session | null>(null);
   const [book, setBook] = useState<TiebanBookV4 | null>(null);
+  const [corpus, setCorpus] = useState<V4Corpus | null>(null);
   const [busy, setBusy] = useState(false);
-  const clauseById = useMemo(() => Object.fromEntries(V4_CALIBRATION_CLAUSES.map((clause) => [clause.id, clause])), []);
+  const [starting, setStarting] = useState(false);
+  const [startError, setStartError] = useState("");
+  const clauseById = useMemo(
+    () => Object.fromEntries((corpus?.calibrationClauses ?? []).map((clause) => [clause.id, clause])),
+    [corpus]
+  );
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
@@ -255,6 +301,17 @@ export function ExperienceV4() {
       setIntake(parsed.intake);
       setSession(parsed.session);
       setBook(parsed.book);
+      if (parsed.view === "calibration") {
+        void loadV4Corpus().then((loaded) => {
+          setCorpus(loaded);
+          setView(parsed.view);
+        }).catch(() => window.localStorage.removeItem(STORAGE_KEY));
+      } else {
+        setView(parsed.view);
+        if (parsed.view === "intake" || parsed.view === "locked") {
+          void loadV4Corpus().then(setCorpus).catch(() => undefined);
+        }
+      }
     } catch {
       window.localStorage.removeItem(STORAGE_KEY);
     }
@@ -269,17 +326,41 @@ export function ExperienceV4() {
     }
   }, [view, intake, session, book]);
 
-  const begin = () => {
-    const next = createTiebanSessionV4(intake, V4_CALIBRATION_CLAUSES, V4_ATOMIC_FACTS, V4_FATE_CLAUSES, Date.now(), V4_CONSTRAINTS);
-    setSession(next);
-    setBook(null);
-    setView(next.phase === "undetermined" ? "undetermined" : "calibration");
+  const enterIntake = () => {
+    setStartError("");
+    setView("intake");
+    void loadV4Corpus().then(setCorpus).catch(() => undefined);
+  };
+
+  const begin = async () => {
+    if (starting) return;
+    setStarting(true);
+    setStartError("");
+    try {
+      const loaded = corpus ?? await loadV4Corpus();
+      setCorpus(loaded);
+      const next = createTiebanSessionV4(
+        intake,
+        loaded.calibrationClauses,
+        loaded.atomicFacts,
+        loaded.fateClauses,
+        Date.now(),
+        loaded.constraints
+      );
+      setSession(next);
+      setBook(null);
+      setView(next.phase === "undetermined" ? "undetermined" : "calibration");
+    } catch {
+      setStartError("起数未成，请再试。");
+    } finally {
+      setStarting(false);
+    }
   };
 
   const answer = (value: TiebanAnswer) => {
-    if (!session || busy) return;
+    if (!session || !corpus || busy) return;
     setBusy(true);
-    const next = answerTiebanClauseV4(session, value, V4_CALIBRATION_CLAUSES, V4_ATOMIC_FACTS);
+    const next = answerTiebanClauseV4(session, value, corpus.calibrationClauses, corpus.atomicFacts);
     window.setTimeout(() => {
       setSession(next);
       setBusy(false);
@@ -289,13 +370,15 @@ export function ExperienceV4() {
   };
 
   const undo = () => {
-    if (!session?.answers.length || busy) return;
-    setSession(replaySession(session, session.answers.length - 1));
+    if (!session?.answers.length || !corpus || busy) return;
+    setSession(replaySession(session, session.answers.length - 1, corpus));
   };
 
-  const openBook = () => {
+  const openBook = async () => {
     if (!session || session.phase !== "locked") return;
-    setBook(buildTiebanBookV4(session, V4_ATOMIC_FACTS, V4_CALIBRATION_CLAUSES, V4_FATE_CLAUSES));
+    const loaded = corpus ?? await loadV4Corpus();
+    setCorpus(loaded);
+    setBook(buildTiebanBookV4(session, loaded.atomicFacts, loaded.calibrationClauses, loaded.fateClauses));
     setView("book");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -306,15 +389,17 @@ export function ExperienceV4() {
     setSession(null);
     setBook(null);
     setBusy(false);
+    setStarting(false);
+    setStartError("");
     window.localStorage.removeItem(STORAGE_KEY);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (view === "landing") return <Landing onBegin={() => setView("intake")} />;
-  if (view === "intake") return <IntakeView value={intake} onChange={setIntake} onStart={begin} onBack={() => setView("landing")} />;
-  if (view === "calibration" && session?.currentClauseId && clauseById[session.currentClauseId]) return <CalibrationViewV4 session={session} busy={busy} onAnswer={answer} onUndo={undo} onReset={reset} />;
+  if (view === "landing") return <Landing onBegin={enterIntake} />;
+  if (view === "intake") return <IntakeView value={intake} onChange={setIntake} onStart={begin} onBack={() => setView("landing")} starting={starting} startError={startError} />;
+  if (view === "calibration" && corpus && session?.currentClauseId && clauseById[session.currentClauseId]) return <CalibrationViewV4 session={session} clauses={corpus.calibrationClauses} busy={busy} onAnswer={answer} onUndo={undo} onReset={reset} />;
   if (view === "locked" && session) return <LockedViewV4 session={session} onOpenBook={openBook} onReset={reset} />;
   if (view === "undetermined" && session) return <UndeterminedView onReset={reset} />;
   if (view === "book" && book) return <BookViewV4 book={book} onReset={reset} />;
-  return <Landing onBegin={() => setView("intake")} />;
+  return <Landing onBegin={enterIntake} />;
 }

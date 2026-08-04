@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import type { ReactNode } from "react";
 
 import "@fontsource/noto-sans-sc/400.css";
 import "@fontsource/noto-sans-sc/500.css";
 import "@fontsource/noto-sans-sc/600.css";
 import "./globals.css";
-
-const huiwenMincho = localFont({
-  src: "../../node_modules/@fontpkg/huiwen-mincho/Huiwen-mincho.otf",
-  variable: "--font-huiwen-mincho",
-  display: "swap",
-  weight: "400"
-});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://metaphysics-9zg.pages.dev";
 const title = "铁板定刻｜考时定分命书";
@@ -38,7 +30,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="zh-CN" className={huiwenMincho.variable}>
+    <html lang="zh-CN">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/huiwen-mincho-product.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

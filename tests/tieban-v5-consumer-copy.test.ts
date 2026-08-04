@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 import { describe, expect, it } from "vitest";
@@ -9,6 +9,7 @@ const root = process.cwd();
 const consumerFiles = [
   "src/components/experience-v3.tsx",
   "src/components/experience-v4.tsx",
+  "src/components/experience-shell.tsx",
   "src/lib/tieban-v4-ritual.ts"
 ];
 
@@ -31,9 +32,29 @@ describe("V5 consumer copy and primary typeface", () => {
   it("loads Huiwen Mincho as the primary display and body face", () => {
     const layout = readFileSync(join(root, "src/app/layout.tsx"), "utf8");
     const styles = readFileSync(join(root, "src/app/globals.css"), "utf8");
-    expect(layout).toContain("@fontpkg/huiwen-mincho/Huiwen-mincho.otf");
-    expect(styles).toContain("--display: var(--font-huiwen-mincho)");
-    expect(styles).toContain("--body: var(--font-huiwen-mincho)");
+    const productFont = join(root, "public/fonts/huiwen-mincho-product.woff2");
+    expect(layout).toContain('href="/fonts/huiwen-mincho-product.woff2"');
+    expect(styles).toContain('font-family: "Huiwen Product"');
+    expect(styles).toContain('--display: "Huiwen Product"');
+    expect(styles).toContain('--body: "Huiwen Product"');
+    expect(existsSync(productFont)).toBe(true);
+    expect(statSync(productFont).size).toBeLessThan(2 * 1024 * 1024);
+  });
+
+  it("keeps fixed display phrases intact at every responsive breakpoint", () => {
+    const shell = readFileSync(join(root, "src/components/experience-shell.tsx"), "utf8");
+    const styles = readFileSync(join(root, "src/app/globals.css"), "utf8");
+    expect(shell).toContain('<h1 className="tb-display-lines"><span>前尘有数，</span><em>刻分待明。</em></h1>');
+    expect(shell).toContain('<h1 className="tb-display-lines"><span>请定年月，</span><span>再择大概时辰。</span></h1>');
+    expect(styles).toMatch(/\.tb-display-lines[\s\S]*?white-space:\s*nowrap/u);
+    expect(styles).toContain("@media (max-width: 980px)");
+  });
+
+  it("defers the V4 corpus until the user enters the flow", () => {
+    const experience = readFileSync(join(root, "src/components/experience-v4.tsx"), "utf8");
+    expect(experience).toContain('import("@/lib/tieban-v4-content")');
+    expect(experience).not.toMatch(/from\s+["']@\/lib\/tieban-v4-content["']/u);
+    expect(experience).toContain('from "@/components/experience-shell"');
   });
 
   it("writes every visible clause explanation as direct contemporary Chinese", () => {

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:pages": "node scripts/build-cloudflare-pages.mjs",
+    "font:subset": "node scripts/subset-huiwen-font.mjs",
     "package": "npm run build && node scripts/prepare-standalone.mjs",
     "start": "node next-build-v6/standalone/server.js",
     "typecheck": "tsc --noEmit",
